@@ -16,3 +16,7 @@ jobs:
       - name: pod install
         working-directory: ./macos
         run: pod install
+
+      - name: xcodebuild
+        working-directory: ./macos
+        run: xcodebuild -workspace plop.xcworkspace -scheme plop
