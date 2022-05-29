@@ -19,4 +19,4 @@ jobs:
 
       - name: xcodebuild
         working-directory: ./macos
-        run: xcodebuild -workspace plop.xcworkspace -scheme plop
+        run: xcodebuild -workspace plop.xcworkspace -scheme plop CODE_SIGNING_REQUIRED=NO
