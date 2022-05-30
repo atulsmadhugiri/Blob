@@ -11,3 +11,18 @@ func generateFileName(nameLength: Int = 6, fileExtension: String = ".png") -> St
   let randomString = UUID().uuidString.suffix(6).lowercased()
   return "\(randomString)\(fileExtension)"
 }
+
+func captureScreenshot() -> String {
+  let temporaryDirectory: String = NSTemporaryDirectory()
+  let destinationPath: String = "\(temporaryDirectory)\(generateFileName())"
+
+  let screenCaptureTask: Process = Process()
+  screenCaptureTask.launchPath = "/usr/sbin/screencapture"
+  screenCaptureTask.arguments = ["-i", "-r", destinationPath]
+  screenCaptureTask.qualityOfService = .userInteractive
+
+  screenCaptureTask.launch()
+  screenCaptureTask.waitUntilExit()
+
+  return destinationPath
+}
