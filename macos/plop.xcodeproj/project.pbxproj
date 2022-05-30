@@ -13,6 +13,7 @@
 		B703FE0224D2A89500ADC7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B703FE0124D2A89500ADC7A0 /* Assets.xcassets */; };
 		B703FE0524D2A89500ADC7A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B703FE0424D2A89500ADC7A0 /* Preview Assets.xcassets */; };
 		B703FE0824D2A89500ADC7A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B703FE0624D2A89500ADC7A0 /* Main.storyboard */; };
+		B707557028444646005D4C51 /* ScreenshotButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B707556F28444646005D4C51 /* ScreenshotButton.swift */; };
 		B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70A98B924DBFD88007DBA7F /* StatusBar.swift */; };
 		B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76CD613276E5716005F1A93 /* GoogleService-Info.plist */; };
 		B7BB43472568EBB400C46F41 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -43,6 +44,7 @@
 		B703FE0724D2A89500ADC7A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B703FE0924D2A89500ADC7A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B703FE0A24D2A89500ADC7A0 /* plop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = plop.entitlements; sourceTree = "<group>"; };
+		B707556F28444646005D4C51 /* ScreenshotButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotButton.swift; sourceTree = "<group>"; };
 		B70A98B924DBFD88007DBA7F /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		B76CD613276E5716005F1A93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		D1AAEC3579E718BD1F1D71E5 /* Pods-plop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.release.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				B703FDFF24D2A89500ADC7A0 /* BlobPopover.swift */,
 				B70A98B924DBFD88007DBA7F /* StatusBar.swift */,
 				B703FE0324D2A89500ADC7A0 /* Preview Content */,
+				B707556F28444646005D4C51 /* ScreenshotButton.swift */,
 			);
 			path = plop;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				B703FE0024D2A89500ADC7A0 /* BlobPopover.swift in Sources */,
 				B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */,
 				B703FDFE24D2A89500ADC7A0 /* AppDelegate.swift in Sources */,
+				B707557028444646005D4C51 /* ScreenshotButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
