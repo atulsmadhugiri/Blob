@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F18EA95E69DED2C0F76B3F5 /* Pods_plop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3949B1759A481563A0EDD6C /* Pods_plop.framework */; };
 		B703FDFE24D2A89500ADC7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703FDFD24D2A89500ADC7A0 /* AppDelegate.swift */; };
 		B703FE0024D2A89500ADC7A0 /* BlobPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703FDFF24D2A89500ADC7A0 /* BlobPopover.swift */; };
 		B703FE0224D2A89500ADC7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B703FE0124D2A89500ADC7A0 /* Assets.xcassets */; };
@@ -14,8 +15,7 @@
 		B703FE0824D2A89500ADC7A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B703FE0624D2A89500ADC7A0 /* Main.storyboard */; };
 		B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70A98B924DBFD88007DBA7F /* StatusBar.swift */; };
 		B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76CD613276E5716005F1A93 /* GoogleService-Info.plist */; };
-		B7BB43462568EBB400C46F41 /* Pods_plop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889E6DA4CE5C054B239B5C1E /* Pods_plop.framework */; };
-		B7BB43472568EBB400C46F41 /* Pods_plop.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 889E6DA4CE5C054B239B5C1E /* Pods_plop.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7BB43472568EBB400C46F41 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,7 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B7BB43472568EBB400C46F41 /* Pods_plop.framework in Embed Frameworks */,
+				B7BB43472568EBB400C46F41 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -33,7 +33,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		889E6DA4CE5C054B239B5C1E /* Pods_plop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		519E0D3159D5D54ECEDF64D4 /* Pods-plop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.debug.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.debug.xcconfig"; sourceTree = "<group>"; };
+		A3949B1759A481563A0EDD6C /* Pods_plop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B703FDFA24D2A89500ADC7A0 /* plop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B703FDFD24D2A89500ADC7A0 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B703FDFF24D2A89500ADC7A0 /* BlobPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPopover.swift; sourceTree = "<group>"; };
@@ -44,8 +45,7 @@
 		B703FE0A24D2A89500ADC7A0 /* plop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = plop.entitlements; sourceTree = "<group>"; };
 		B70A98B924DBFD88007DBA7F /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		B76CD613276E5716005F1A93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
-		C4E35AE4C97421C445F5F985 /* Pods-plop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.debug.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.debug.xcconfig"; sourceTree = "<group>"; };
-		EFA6E8BC31BD197401A78189 /* Pods-plop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.release.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.release.xcconfig"; sourceTree = "<group>"; };
+		D1AAEC3579E718BD1F1D71E5 /* Pods-plop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.release.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,20 +53,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7BB43462568EBB400C46F41 /* Pods_plop.framework in Frameworks */,
+				6F18EA95E69DED2C0F76B3F5 /* Pods_plop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F07926F789FD77A245772FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A3949B1759A481563A0EDD6C /* Pods_plop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B703FDF124D2A89500ADC7A0 = {
 			isa = PBXGroup;
 			children = (
 				B703FDFC24D2A89500ADC7A0 /* plop */,
 				B703FDFB24D2A89500ADC7A0 /* Products */,
 				ECDD8214A6FE13FF51E8DA12 /* Pods */,
-				CE8AA598F5352A23DD83FA2B /* Frameworks */,
+				0F07926F789FD77A245772FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,19 +110,11 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		CE8AA598F5352A23DD83FA2B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				889E6DA4CE5C054B239B5C1E /* Pods_plop.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		ECDD8214A6FE13FF51E8DA12 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C4E35AE4C97421C445F5F985 /* Pods-plop.debug.xcconfig */,
-				EFA6E8BC31BD197401A78189 /* Pods-plop.release.xcconfig */,
+				519E0D3159D5D54ECEDF64D4 /* Pods-plop.debug.xcconfig */,
+				D1AAEC3579E718BD1F1D71E5 /* Pods-plop.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -126,12 +126,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B703FE0D24D2A89500ADC7A0 /* Build configuration list for PBXNativeTarget "plop" */;
 			buildPhases = (
-				4EE4BF0A7FBBC7EFC74AF7C1 /* [CP] Check Pods Manifest.lock */,
+				6286DC31AE1B912482887E39 /* [CP] Check Pods Manifest.lock */,
 				B703FDF624D2A89500ADC7A0 /* Sources */,
 				B703FDF724D2A89500ADC7A0 /* Frameworks */,
 				B703FDF824D2A89500ADC7A0 /* Resources */,
-				2CA7D7625A961C3B1DC935E2 /* [CP] Embed Pods Frameworks */,
 				B7BB43482568EBB400C46F41 /* Embed Frameworks */,
+				BC709F27B51E0BE889CB83AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,24 +189,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2CA7D7625A961C3B1DC935E2 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4EE4BF0A7FBBC7EFC74AF7C1 /* [CP] Check Pods Manifest.lock */ = {
+		6286DC31AE1B912482887E39 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -226,6 +209,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC709F27B51E0BE889CB83AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -372,7 +372,7 @@
 		};
 		B703FE0E24D2A89500ADC7A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C4E35AE4C97421C445F5F985 /* Pods-plop.debug.xcconfig */;
+			baseConfigurationReference = 519E0D3159D5D54ECEDF64D4 /* Pods-plop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -398,7 +398,7 @@
 		};
 		B703FE0F24D2A89500ADC7A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EFA6E8BC31BD197401A78189 /* Pods-plop.release.xcconfig */;
+			baseConfigurationReference = D1AAEC3579E718BD1F1D71E5 /* Pods-plop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
