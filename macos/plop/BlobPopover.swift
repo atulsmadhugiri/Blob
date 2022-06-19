@@ -2,7 +2,12 @@ import SwiftUI
 
 struct BlobPopover: View {
   var body: some View {
-    Text("Hello world.").padding()
+    VStack {
+      HStack {
+        Button(action: {}) { ScreenshotButton() }
+        Button(action: {}) { UploadButton() }
+      }
+    }
   }
 }
 
