@@ -18,6 +18,7 @@
 		B70755742844499E005D4C51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70755732844499E005D4C51 /* Utils.swift */; };
 		B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70A98B924DBFD88007DBA7F /* StatusBar.swift */; };
 		B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76CD613276E5716005F1A93 /* GoogleService-Info.plist */; };
+		B7B5D62B285EF2F500E8BC8A /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		B70755732844499E005D4C51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B70A98B924DBFD88007DBA7F /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		B76CD613276E5716005F1A93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		D1AAEC3579E718BD1F1D71E5 /* Pods-plop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.release.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				B70A98B924DBFD88007DBA7F /* StatusBar.swift */,
 				B707556F28444646005D4C51 /* ScreenshotButton.swift */,
 				B70755712844483C005D4C51 /* UploadButton.swift */,
+				B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */,
 				B70755732844499E005D4C51 /* Utils.swift */,
 			);
 			path = plop;
@@ -246,6 +249,7 @@
 				B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */,
 				B70755722844483C005D4C51 /* UploadButton.swift in Sources */,
 				B703FDFE24D2A89500ADC7A0 /* AppDelegate.swift in Sources */,
+				B7B5D62B285EF2F500E8BC8A /* CopyButton.swift in Sources */,
 				B707557028444646005D4C51 /* ScreenshotButton.swift in Sources */,
 				B70755742844499E005D4C51 /* Utils.swift in Sources */,
 			);

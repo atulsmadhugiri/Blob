@@ -19,13 +19,7 @@ struct BlobPopover: View {
       HStack {
         TextField("", text: $previousUploadURL).frame(width: 208)
 
-        Button(action: {}) {
-          if #available(macOS 11.0, *) {
-            Image(systemName: "link.circle")
-          } else {
-            Text("Copy")
-          }
-        }
+        Button(action: {}) { CopyButton() }
 
         Button(action: {}) {
           if #available(macOS 11.0, *) {
