@@ -19,7 +19,7 @@ struct BlobPopover: View {
       HStack {
         TextField("", text: $previousUploadURL).frame(width: 208)
         Button(action: {}) { CopyButton() }
-        Button(action: {}) { OpenButton() }
+        OpenButton(previousUploadURL: previousUploadURL)
       }
     }.padding(.all, 20)
   }
