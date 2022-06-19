@@ -1,15 +1,14 @@
-import SwiftUI
 import FirebaseCore
+import SwiftUI
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-  
   var statusBar: StatusBar?
-  var popover = NSPopover.init()
-  
-  func applicationDidFinishLaunching(_ aNotification: Notification) {
+  var popover = NSPopover()
+
+  func applicationDidFinishLaunching(_: Notification) {
     FirebaseApp.configure()
-    
+
     // We use NSPopover in place of NSWindow so icon appears in menubar.
     // Credit: Anagh Sharma (https://github.com/AnaghSharma)
     let contentView = BlobPopover()
@@ -17,8 +16,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     popover.contentViewController = NSHostingController(rootView: contentView)
     popover.animates = false
     popover.behavior = NSPopover.Behavior.transient
-    
-    statusBar = StatusBar.init(popover)
+
+    statusBar = StatusBar(popover)
   }
-  
 }

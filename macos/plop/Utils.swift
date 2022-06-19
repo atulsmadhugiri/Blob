@@ -2,22 +2,22 @@ import AppKit
 import FirebaseStorage
 import Foundation
 
-func replaceClipboard(with newString: String) -> Void {
-  let pasteboard = NSPasteboard.general;
+func replaceClipboard(with newString: String) {
+  let pasteboard = NSPasteboard.general
   pasteboard.clearContents()
   pasteboard.writeObjects([newString as NSString])
 }
 
-func generateFileName(nameLength: Int = 6, fileExtension: String = ".png") -> String {
+func generateFileName(nameLength _: Int = 6, fileExtension: String = ".png") -> String {
   let randomString = UUID().uuidString.suffix(6).lowercased()
   return "\(randomString)\(fileExtension)"
 }
 
 func captureScreenshot() -> String {
   let temporaryDirectory: String = NSTemporaryDirectory()
-  let destinationPath: String = "\(temporaryDirectory)\(generateFileName())"
+  let destinationPath = "\(temporaryDirectory)\(generateFileName())"
 
-  let screenCaptureTask: Process = Process()
+  let screenCaptureTask = Process()
   screenCaptureTask.launchPath = "/usr/sbin/screencapture"
   screenCaptureTask.arguments = ["-i", "-r", destinationPath]
   screenCaptureTask.qualityOfService = .userInteractive
