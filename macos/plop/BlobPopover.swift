@@ -1,7 +1,9 @@
 import SwiftUI
 
 struct BlobPopover: View {
-  @State private var uploadProgress = 1.0
+  @State private var uploadProgress: Double = 1.0
+  @State private var previousUploadURL: String = ""
+  @State private var anonymousUploadsEnabled: Bool = false
 
   var body: some View {
     VStack {
