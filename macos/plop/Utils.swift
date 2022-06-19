@@ -28,7 +28,7 @@ func captureScreenshot() -> String {
   return destinationPath
 }
 
-func uploadBlob(filepath: String) -> (endpoint: String, uploadTask: StorageUploadTask) {
+func uploadBlob(filepath: String) -> (destinationURL: String, uploadTask: StorageUploadTask) {
   let filename: String = URL(string: filepath)!.lastPathComponent
 
   let storageBucket = Storage.storage(url: "gs://\(GCLOUD_STORAGE_BUCKET)").reference()

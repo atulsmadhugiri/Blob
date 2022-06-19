@@ -7,15 +7,15 @@ struct ScreenshotButton: View {
   var body: some View {
     Button(action: {
       let filepath = captureScreenshot()
-      let retval = uploadBlob(filepath: filepath)
+      let (destinationURL, uploadTask) = uploadBlob(filepath: filepath)
 
-      previousUploadURL = retval.endpoint
-      retval.uploadTask.observe(.progress) { snapshot in
+      previousUploadURL = destinationURL
+      uploadTask.observe(.progress) { snapshot in
         uploadProgress = snapshot.progress?.fractionCompleted ?? 0
       }
-      retval.uploadTask.observe(.success) { _ in
+      uploadTask.observe(.success) { _ in
         NSSound(named: "Funk")?.play()
-        replaceClipboard(with: retval.endpoint)
+        replaceClipboard(with: destinationURL)
       }
     }) {
       if #available(macOS 11.0, *) {
