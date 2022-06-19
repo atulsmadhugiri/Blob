@@ -8,7 +8,7 @@ struct BlobPopover: View {
   var body: some View {
     VStack {
       HStack {
-        Button(action: {}) { ScreenshotButton() }
+        ScreenshotButton(previousUploadURL: $previousUploadURL, uploadProgress: $uploadProgress)
         Button(action: {}) { UploadButton() }
       }
 
