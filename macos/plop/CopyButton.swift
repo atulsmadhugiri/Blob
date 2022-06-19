@@ -2,7 +2,7 @@ import SwiftUI
 
 struct CopyButton: View {
   var previousUploadURL: String
-  
+
   var body: some View {
     Button(action: {
       replaceClipboard(with: previousUploadURL)
