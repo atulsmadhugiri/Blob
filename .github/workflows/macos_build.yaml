@@ -42,10 +42,6 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
-      - name: pod install
-        working-directory: ./macos
-        run: pod install
-
       - name: xcodebuild
         working-directory: ./macos
-        run: xcodebuild -workspace plop.xcworkspace -scheme plop CODE_SIGNING_REQUIRED=NO
+        run: xcodebuild -project plop.xcodeproj -scheme plop CODE_SIGNING_REQUIRED=NO

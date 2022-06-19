@@ -1,8 +1,0 @@
-platform :osx, '10.12'
-
-target 'plop' do
-  use_frameworks!
-  pod 'FirebaseCore'
-  pod 'FirebaseStorage'
-  pod 'HotKey'
-end

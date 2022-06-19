@@ -3,11 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6F18EA95E69DED2C0F76B3F5 /* Pods_plop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3949B1759A481563A0EDD6C /* Pods_plop.framework */; };
 		B703FDFE24D2A89500ADC7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703FDFD24D2A89500ADC7A0 /* AppDelegate.swift */; };
 		B703FE0024D2A89500ADC7A0 /* BlobPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703FDFF24D2A89500ADC7A0 /* BlobPopover.swift */; };
 		B703FE0224D2A89500ADC7A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B703FE0124D2A89500ADC7A0 /* Assets.xcassets */; };
@@ -17,6 +16,8 @@
 		B70755722844483C005D4C51 /* UploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70755712844483C005D4C51 /* UploadButton.swift */; };
 		B70755742844499E005D4C51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70755732844499E005D4C51 /* Utils.swift */; };
 		B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70A98B924DBFD88007DBA7F /* StatusBar.swift */; };
+		B721CFB7285F833B00B945C9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B721CFB6285F833B00B945C9 /* FirebaseStorage */; };
+		B721CFBA285F839900B945C9 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = B721CFB9285F839900B945C9 /* HotKey */; };
 		B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76CD613276E5716005F1A93 /* GoogleService-Info.plist */; };
 		B7B5D62B285EF2F500E8BC8A /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */; };
 		B7B5D62D285EF39400E8BC8A /* OpenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62C285EF39400E8BC8A /* OpenButton.swift */; };
@@ -37,8 +38,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		519E0D3159D5D54ECEDF64D4 /* Pods-plop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.debug.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.debug.xcconfig"; sourceTree = "<group>"; };
-		A3949B1759A481563A0EDD6C /* Pods_plop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B703FDFA24D2A89500ADC7A0 /* plop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B703FDFD24D2A89500ADC7A0 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B703FDFF24D2A89500ADC7A0 /* BlobPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPopover.swift; sourceTree = "<group>"; };
@@ -55,7 +54,6 @@
 		B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		B7B5D62C285EF39400E8BC8A /* OpenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenButton.swift; sourceTree = "<group>"; };
 		B7B5D62E285EF8D200E8BC8A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		D1AAEC3579E718BD1F1D71E5 /* Pods-plop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.release.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,28 +61,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F18EA95E69DED2C0F76B3F5 /* Pods_plop.framework in Frameworks */,
+				B721CFBA285F839900B945C9 /* HotKey in Frameworks */,
+				B721CFB7285F833B00B945C9 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F07926F789FD77A245772FE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A3949B1759A481563A0EDD6C /* Pods_plop.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B703FDF124D2A89500ADC7A0 = {
 			isa = PBXGroup;
 			children = (
 				B703FDFC24D2A89500ADC7A0 /* plop */,
 				B703FDFB24D2A89500ADC7A0 /* Products */,
-				ECDD8214A6FE13FF51E8DA12 /* Pods */,
-				0F07926F789FD77A245772FE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,15 +115,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		ECDD8214A6FE13FF51E8DA12 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				519E0D3159D5D54ECEDF64D4 /* Pods-plop.debug.xcconfig */,
-				D1AAEC3579E718BD1F1D71E5 /* Pods-plop.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,18 +122,20 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B703FE0D24D2A89500ADC7A0 /* Build configuration list for PBXNativeTarget "plop" */;
 			buildPhases = (
-				6286DC31AE1B912482887E39 /* [CP] Check Pods Manifest.lock */,
 				B703FDF624D2A89500ADC7A0 /* Sources */,
 				B703FDF724D2A89500ADC7A0 /* Frameworks */,
 				B703FDF824D2A89500ADC7A0 /* Resources */,
 				B7BB43482568EBB400C46F41 /* Embed Frameworks */,
-				BC709F27B51E0BE889CB83AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = plop;
+			packageProductDependencies = (
+				B721CFB6285F833B00B945C9 /* FirebaseStorage */,
+				B721CFB9285F839900B945C9 /* HotKey */,
+			);
 			productName = plop;
 			productReference = B703FDFA24D2A89500ADC7A0 /* plop.app */;
 			productType = "com.apple.product-type.application";
@@ -181,6 +163,10 @@
 				Base,
 			);
 			mainGroup = B703FDF124D2A89500ADC7A0;
+			packageReferences = (
+				B721CFB5285F833B00B945C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				B721CFB8285F839900B945C9 /* XCRemoteSwiftPackageReference "HotKey" */,
+			);
 			productRefGroup = B703FDFB24D2A89500ADC7A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,48 +189,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6286DC31AE1B912482887E39 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-plop-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BC709F27B51E0BE889CB83AF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-plop/Pods-plop-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B703FDF624D2A89500ADC7A0 /* Sources */ = {
@@ -394,7 +338,6 @@
 		};
 		B703FE0E24D2A89500ADC7A0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 519E0D3159D5D54ECEDF64D4 /* Pods-plop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,7 +363,6 @@
 		};
 		B703FE0F24D2A89500ADC7A0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1AAEC3579E718BD1F1D71E5 /* Pods-plop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -466,6 +408,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B721CFB5285F833B00B945C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+		B721CFB8285F839900B945C9 /* XCRemoteSwiftPackageReference "HotKey" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/soffes/HotKey";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B721CFB6285F833B00B945C9 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B721CFB5285F833B00B945C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		B721CFB9285F839900B945C9 /* HotKey */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B721CFB8285F839900B945C9 /* XCRemoteSwiftPackageReference "HotKey" */;
+			productName = HotKey;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B703FDF224D2A89500ADC7A0 /* Project object */;
 }
