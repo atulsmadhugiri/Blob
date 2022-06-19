@@ -32,6 +32,7 @@ struct ScreenshotButton: View {
 
 struct ScreenshotButton_Previews: PreviewProvider {
   static var previews: some View {
-    ScreenshotButton(previousUploadURL: .constant("https://google.com"), uploadProgress: .constant(1.0))
+    ScreenshotButton(
+      previousUploadURL: .constant("https://google.com"), uploadProgress: .constant(1.0))
   }
 }

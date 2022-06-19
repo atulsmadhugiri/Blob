@@ -31,7 +31,8 @@ class StatusBar {
 
   func showPopover(_: AnyObject) {
     if let statusBarButton = statusItem.button {
-      popover.show(relativeTo: statusBarButton.bounds, of: statusBarButton, preferredEdge: NSRectEdge.maxY)
+      popover.show(
+        relativeTo: statusBarButton.bounds, of: statusBarButton, preferredEdge: NSRectEdge.maxY)
     }
   }
 
