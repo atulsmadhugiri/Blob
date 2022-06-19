@@ -41,10 +41,5 @@ func uploadBlob(filepath: String) -> (endpoint: String, uploadTask: StorageUploa
     }
   }
 
-  uploadTask.observe(.success) { _ in
-    NSSound(named: "Funk")?.play()
-    replaceClipboard(with: destinationURL)
-  }
-
   return (destinationURL, uploadTask)
 }

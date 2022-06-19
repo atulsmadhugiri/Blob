@@ -13,6 +13,10 @@ struct ScreenshotButton: View {
       retval.uploadTask.observe(.progress) { snapshot in
         uploadProgress = snapshot.progress?.fractionCompleted ?? 0
       }
+      retval.uploadTask.observe(.success) { _ in
+        NSSound(named: "Funk")?.play()
+        replaceClipboard(with: retval.endpoint)
+      }
     }) {
       if #available(macOS 11.0, *) {
         Text("Screenshot (")
