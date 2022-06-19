@@ -45,6 +45,12 @@ jobs:
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp $PP_PATH ~/Library/MobileDevice/Provisioning\ Profiles
 
+      - name: Include GoogleServiceInfoPlist
+        working-directory: ./macos
+        env:
+          GOOGLE_SERVICE_INFO_PLIST: ${{ secrets.GOOGLE_SERVICE_INFO_PLIST }}
+        run: echo $GOOGLE_SERVICE_INFO_PLIST | base64 --decode > GoogleService-Info.plist
+
       - name: xcodebuild
         working-directory: ./macos
         run: xcodebuild -project plop.xcodeproj -scheme plop CODE_SIGNING_REQUIRED=NO
