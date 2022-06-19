@@ -11,8 +11,29 @@ struct BlobPopover: View {
         Button(action: {}) { ScreenshotButton() }
         Button(action: {}) { UploadButton() }
       }
+
       if #available(macOS 11.0, *) {
         ProgressView("", value: uploadProgress, total: 1.0).padding(.horizontal, 20)
+      }
+
+      HStack {
+        TextField("", text: $previousUploadURL).frame(width: 208)
+
+        Button(action: {}) {
+          if #available(macOS 11.0, *) {
+            Image(systemName: "link.circle")
+          } else {
+            Text("Copy")
+          }
+        }
+
+        Button(action: {}) {
+          if #available(macOS 11.0, *) {
+            Image(systemName: "safari")
+          } else {
+            Text("Open")
+          }
+        }
       }
     }.padding(.all, 20)
   }
