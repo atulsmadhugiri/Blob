@@ -5,5 +5,4 @@ target 'plop' do
   pod 'FirebaseCore'
   pod 'FirebaseStorage'
   pod 'HotKey'
-  pod 'AsyncSwift'
 end
