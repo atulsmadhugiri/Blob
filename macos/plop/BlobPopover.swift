@@ -12,9 +12,7 @@ struct BlobPopover: View {
         Button(action: {}) { UploadButton() }
       }
 
-      if #available(macOS 11.0, *) {
-        ProgressView("", value: uploadProgress, total: 1.0).padding(.horizontal, 20)
-      }
+      UploadProgressView(uploadProgress: uploadProgress)
 
       HStack {
         TextField("", text: $previousUploadURL).frame(width: 208)
