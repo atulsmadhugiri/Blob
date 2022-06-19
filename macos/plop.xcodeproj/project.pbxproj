@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DDA00C2F39AD8C271E56255 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDA066464DCE3D42901048D /* Global.swift */; };
 		6F18EA95E69DED2C0F76B3F5 /* Pods_plop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3949B1759A481563A0EDD6C /* Pods_plop.framework */; };
 		B703FDFE24D2A89500ADC7A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703FDFD24D2A89500ADC7A0 /* AppDelegate.swift */; };
 		B703FE0024D2A89500ADC7A0 /* BlobPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B703FDFF24D2A89500ADC7A0 /* BlobPopover.swift */; };
@@ -18,7 +19,6 @@
 		B70755742844499E005D4C51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70755732844499E005D4C51 /* Utils.swift */; };
 		B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70A98B924DBFD88007DBA7F /* StatusBar.swift */; };
 		B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76CD613276E5716005F1A93 /* GoogleService-Info.plist */; };
-		B7BB43472568EBB400C46F41 /* (null) in Embed Frameworks */ = {isa = PBXBuildFile; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,7 +28,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B7BB43472568EBB400C46F41 /* (null) in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,6 +35,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2DDA066464DCE3D42901048D /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		519E0D3159D5D54ECEDF64D4 /* Pods-plop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-plop.debug.xcconfig"; path = "Target Support Files/Pods-plop/Pods-plop.debug.xcconfig"; sourceTree = "<group>"; };
 		A3949B1759A481563A0EDD6C /* Pods_plop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_plop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B703FDFA24D2A89500ADC7A0 /* plop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plop.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +107,7 @@
 				B707556F28444646005D4C51 /* ScreenshotButton.swift */,
 				B70755712844483C005D4C51 /* UploadButton.swift */,
 				B70755732844499E005D4C51 /* Utils.swift */,
+				2DDA066464DCE3D42901048D /* Global.swift */,
 			);
 			path = plop;
 			sourceTree = "<group>";
@@ -250,6 +251,7 @@
 				B703FDFE24D2A89500ADC7A0 /* AppDelegate.swift in Sources */,
 				B707557028444646005D4C51 /* ScreenshotButton.swift in Sources */,
 				B70755742844499E005D4C51 /* Utils.swift in Sources */,
+				2DDA00C2F39AD8C271E56255 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
