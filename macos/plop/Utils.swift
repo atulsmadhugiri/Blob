@@ -1,5 +1,6 @@
-import Foundation
 import AppKit
+import FirebaseStorage
+import Foundation
 
 func replaceClipboard(with newString: String) -> Void {
   let pasteboard = NSPasteboard.general;
@@ -25,4 +26,25 @@ func captureScreenshot() -> String {
   screenCaptureTask.waitUntilExit()
 
   return destinationPath
+}
+
+func uploadBlob(filepath: String) -> (endpoint: String, uploadTask: StorageUploadTask) {
+  let filename: String = URL(string: filepath)!.lastPathComponent
+
+  let storageBucket = Storage.storage(url: "gs://\(GCLOUD_STORAGE_BUCKET)").reference()
+  let destinationRef = storageBucket.child("\(filename)")
+  let destinationURL = "https://\(GCLOUD_STORAGE_BUCKET)\(filename)"
+
+  let uploadTask = destinationRef.putFile(from: URL(fileURLWithPath: filepath)) { _, error in
+    if let error = error {
+      print("Error uploading file to Google Cloud Storage: \(error)")
+    }
+  }
+
+  uploadTask.observe(.success) { _ in
+    NSSound(named: "Funk")?.play()
+    replaceClipboard(with: destinationURL)
+  }
+
+  return (destinationURL, uploadTask)
 }
