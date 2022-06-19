@@ -7,11 +7,7 @@ struct CopyButton: View {
     Button(action: {
       replaceClipboard(with: previousUploadURL)
     }) {
-      if #available(macOS 11.0, *) {
-        Image(systemName: "link.circle")
-      } else {
-        Text("Copy")
-      }
+      Image(systemName: "link.circle")
     }
   }
 }

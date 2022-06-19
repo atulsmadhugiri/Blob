@@ -9,11 +9,7 @@ struct OpenButton: View {
         NSWorkspace.shared.open(url)
       }
     }) {
-      if #available(macOS 11.0, *) {
-        Image(systemName: "safari")
-      } else {
-        Text("Open")
-      }
+      Image(systemName: "safari")
     }
   }
 }

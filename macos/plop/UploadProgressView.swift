@@ -4,9 +4,7 @@ struct UploadProgressView: View {
   var uploadProgress: Double
 
   var body: some View {
-    if #available(macOS 11.0, *) {
-      ProgressView("", value: uploadProgress, total: 1.0).padding(.horizontal, 20)
-    }
+    ProgressView("", value: uploadProgress, total: 1.0).padding(.horizontal, 20)
   }
 }
 

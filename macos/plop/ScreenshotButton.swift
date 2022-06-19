@@ -18,14 +18,10 @@ struct ScreenshotButton: View {
         replaceClipboard(with: destinationURL)
       }
     }) {
-      if #available(macOS 11.0, *) {
-        Text("Screenshot (")
-        Image(systemName: "command")
-        Image(systemName: "shift")
-        Text("Z )")
-      } else {
-        Text("Screenshot (CMD-SHIFT-Z)")
-      }
+      Text("Screenshot (")
+      Image(systemName: "command")
+      Image(systemName: "shift")
+      Text("Z )")
     }
   }
 }

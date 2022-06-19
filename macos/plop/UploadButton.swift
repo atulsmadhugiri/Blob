@@ -2,14 +2,10 @@ import SwiftUI
 
 struct UploadButton: View {
   var body: some View {
-    if #available(macOS 11.0, *) {
-      Text("Upload (")
-      Image(systemName: "command")
-      Image(systemName: "shift")
-      Text("U )")
-    } else {
-      Text("Upload (CMD-SHIFT-U)")
-    }
+    Text("Upload (")
+    Image(systemName: "command")
+    Image(systemName: "shift")
+    Text("U )")
   }
 }
 
