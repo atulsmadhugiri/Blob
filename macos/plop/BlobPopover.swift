@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct BlobPopover: View {
-  @State var uploadProgress = 1.0
+  @State private var uploadProgress = 1.0
 
   var body: some View {
     VStack {
