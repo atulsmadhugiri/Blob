@@ -8,8 +8,8 @@ func replaceClipboard(with newString: String) {
   pasteboard.writeObjects([newString as NSString])
 }
 
-func generateFileName(nameLength _: Int = 6, fileExtension: String = ".png") -> String {
-  let randomString = UUID().uuidString.suffix(6).lowercased()
+func generateFileName(nameLength: Int = 6, fileExtension: String = ".png") -> String {
+  let randomString = UUID().uuidString.suffix(nameLength).lowercased()
   return "\(randomString)\(fileExtension)"
 }
 
