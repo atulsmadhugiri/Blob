@@ -19,7 +19,15 @@ struct BlobPopover: View {
         CopyButton(previousUploadURL: previousUploadURL)
         OpenButton(previousUploadURL: previousUploadURL)
       }
-    }.padding(.all, 20)
+
+      Divider()
+
+      AsyncImage(url: URL(string: previousUploadURL)) { image in
+        image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200)
+      } placeholder: {
+        Color.gray.opacity(0.1).cornerRadius(8)
+      }
+    }.padding(.all, 10).padding(.top, 10)
   }
 }
 
