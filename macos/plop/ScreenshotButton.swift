@@ -9,13 +9,13 @@ struct ScreenshotButton: View {
       let filepath = captureScreenshot()
       let (destinationURL, uploadTask) = uploadBlob(filepath: filepath)
 
-      previousUploadURL = destinationURL
       uploadTask.observe(.progress) { snapshot in
         uploadProgress = snapshot.progress?.fractionCompleted ?? 0
       }
       uploadTask.observe(.success) { _ in
         NSSound(named: "Funk")?.play()
         replaceClipboard(with: destinationURL)
+        previousUploadURL = destinationURL
       }
     }) {
       Text("Screenshot (")

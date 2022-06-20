@@ -21,7 +21,6 @@ struct UploadButton: View {
       do {
         let filepath = try result.get().path
         let (destinationURL, uploadTask) = uploadBlob(filepath: filepath)
-        previousUploadURL = destinationURL
 
         uploadTask.observe(.progress) { snapshot in
           uploadProgress = snapshot.progress?.fractionCompleted ?? 0
@@ -29,6 +28,7 @@ struct UploadButton: View {
         uploadTask.observe(.success) { _ in
           NSSound(named: "Funk")?.play()
           replaceClipboard(with: destinationURL)
+          previousUploadURL = destinationURL
         }
       } catch {
         print("Could not get filepath for selected file.")
