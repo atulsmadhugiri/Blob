@@ -3,12 +3,15 @@ import SwiftUI
 struct BlobPopover: View {
   @State private var uploadProgress: Double = 1.0
   @State private var previousUploadURL: String = ""
+  @State private var previousUploadLocalPath: URL?
   @State private var anonymousUploadsEnabled: Bool = false
 
   var body: some View {
     VStack {
       HStack {
-        ScreenshotButton(previousUploadURL: $previousUploadURL, uploadProgress: $uploadProgress)
+        ScreenshotButton(
+          previousUploadURL: $previousUploadURL, previousUploadLocalPath: $previousUploadLocalPath,
+          uploadProgress: $uploadProgress)
         UploadButton(previousUploadURL: $previousUploadURL, uploadProgress: $uploadProgress)
       }
 
@@ -23,7 +26,15 @@ struct BlobPopover: View {
       Divider()
 
       AsyncImage(url: URL(string: previousUploadURL)) { image in
-        image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200)
+        image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200).onDrag {
+          if let previousUploadLocalPath = previousUploadLocalPath {
+            if let provider = NSItemProvider(contentsOf: previousUploadLocalPath) {
+              provider.suggestedName = previousUploadLocalPath.lastPathComponent
+              return provider
+            }
+          }
+          return NSItemProvider()
+        }
       } placeholder: {
         Color.gray.opacity(0.1).cornerRadius(8)
       }

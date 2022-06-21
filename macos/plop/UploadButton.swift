@@ -20,7 +20,7 @@ struct UploadButton: View {
     ) { result in
       do {
         let filepath = try result.get().path
-        let (destinationURL, uploadTask) = uploadBlob(filepath: filepath)
+        let (destinationURL, uploadTask, _) = uploadBlob(filepath: filepath)
 
         uploadTask.observe(.progress) { snapshot in
           uploadProgress = snapshot.progress?.fractionCompleted ?? 0
