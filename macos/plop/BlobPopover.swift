@@ -28,9 +28,16 @@ struct BlobPopover: View {
       AsyncImage(url: URL(string: previousUploadURL)) { image in
         image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200).onDrag {
           if let previousUploadLocalPath = previousUploadLocalPath {
-            if let provider = NSItemProvider(contentsOf: previousUploadLocalPath) {
-              provider.suggestedName = previousUploadLocalPath.lastPathComponent
-              return provider
+            let temporaryPath = URL(fileURLWithPath: "\(NSTemporaryDirectory())onDrag/\(previousUploadLocalPath.lastPathComponent)")
+            do {
+              try FileManager().createDirectory(at: temporaryPath.deletingLastPathComponent(), withIntermediateDirectories: true)
+              try FileManager().copyItem(at: previousUploadLocalPath, to: temporaryPath)
+              if let provider = NSItemProvider(contentsOf: temporaryPath) {
+                provider.suggestedName = previousUploadLocalPath.lastPathComponent
+                return provider
+              }
+            } catch {
+              print("Error creating temporary file in .onDrag")
             }
           }
           return NSItemProvider()
