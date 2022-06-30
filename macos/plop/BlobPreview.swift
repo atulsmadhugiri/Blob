@@ -1,13 +1,12 @@
 import SwiftUI
 
 struct BlobPreview: View {
-  var previousUploadURL: String
   var previousUploadLocalPath: URL?
 
   var body: some View {
-    AsyncImage(url: URL(string: previousUploadURL)) { image in
+    AsyncImage(url: previousUploadLocalPath) { image in
       image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200).id(
-        previousUploadURL
+        previousUploadLocalPath
       ).transition(.opacity.animation(.default)).onDrag {
         if let previousUploadLocalPath = previousUploadLocalPath {
           let temporaryPath = URL(
@@ -35,6 +34,6 @@ struct BlobPreview: View {
 
 struct BlobPreview_Previews: PreviewProvider {
   static var previews: some View {
-    BlobPreview(previousUploadURL: "https://blob.sh/dabff5.png")
+    BlobPreview()
   }
 }

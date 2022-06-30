@@ -25,8 +25,7 @@ struct BlobPopover: View {
 
       Divider()
 
-      BlobPreview(
-        previousUploadURL: previousUploadURL, previousUploadLocalPath: previousUploadLocalPath)
+      BlobPreview(previousUploadLocalPath: previousUploadLocalPath)
 
     }.padding(.all, 10).padding(.top, 10)
   }
