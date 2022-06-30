@@ -23,6 +23,7 @@
 		B7B5D62B285EF2F500E8BC8A /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */; };
 		B7B5D62D285EF39400E8BC8A /* OpenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62C285EF39400E8BC8A /* OpenButton.swift */; };
 		B7B5D62F285EF8D200E8BC8A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62E285EF8D200E8BC8A /* Constants.swift */; };
+		B7BDCC60286D69B700B668CC /* BlobPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDCC5F286D69B700B668CC /* BlobPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -56,6 +57,7 @@
 		B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		B7B5D62C285EF39400E8BC8A /* OpenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenButton.swift; sourceTree = "<group>"; };
 		B7B5D62E285EF8D200E8BC8A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B7BDCC5F286D69B700B668CC /* BlobPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */,
 				B7B5D62C285EF39400E8BC8A /* OpenButton.swift */,
 				B70755732844499E005D4C51 /* Utils.swift */,
+				B7BDCC5F286D69B700B668CC /* BlobPreview.swift */,
 			);
 			path = plop;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B703FE0024D2A89500ADC7A0 /* BlobPopover.swift in Sources */,
+				B7BDCC60286D69B700B668CC /* BlobPreview.swift in Sources */,
 				B7B5D62D285EF39400E8BC8A /* OpenButton.swift in Sources */,
 				B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */,
 				B70755722844483C005D4C51 /* UploadButton.swift in Sources */,
