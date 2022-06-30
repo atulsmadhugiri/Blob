@@ -26,7 +26,7 @@ struct BlobPopover: View {
       Divider()
 
       AsyncImage(url: URL(string: previousUploadURL)) { image in
-        image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200).onDrag {
+        image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200).id(previousUploadURL).transition(.opacity.animation(.default)).onDrag {
           if let previousUploadLocalPath = previousUploadLocalPath {
             let temporaryPath = URL(fileURLWithPath: "\(NSTemporaryDirectory())onDrag/\(previousUploadLocalPath.lastPathComponent)")
             do {
