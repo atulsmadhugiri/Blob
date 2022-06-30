@@ -14,7 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let contentView = BlobPopover()
     popover.contentSize = NSSize(width: 360, height: 360)
     popover.contentViewController = NSHostingController(rootView: contentView)
-    popover.animates = true
+    popover.animates = false
     popover.behavior = NSPopover.Behavior.transient
 
     statusBar = StatusBar(popover)
