@@ -5,13 +5,14 @@ struct BlobPopover: View {
   @State private var previousUploadURL: String = ""
   @State private var previousUploadLocalPath: URL?
   @State private var anonymousUploadsEnabled: Bool = false
+  @State private var recognizedText: String?
 
   var body: some View {
     VStack {
       HStack {
         ScreenshotButton(
           previousUploadURL: $previousUploadURL, previousUploadLocalPath: $previousUploadLocalPath,
-          uploadProgress: $uploadProgress)
+          uploadProgress: $uploadProgress, recognizedText: $recognizedText)
         UploadButton(previousUploadURL: $previousUploadURL, uploadProgress: $uploadProgress)
       }
 
@@ -26,6 +27,10 @@ struct BlobPopover: View {
       Divider()
 
       BlobPreview(previousUploadLocalPath: previousUploadLocalPath)
+
+      Divider()
+
+      Text(recognizedText ?? "").fixedSize(horizontal: false, vertical: true).lineLimit(4)
 
     }.padding(.all, 10).padding(.top, 10)
   }
