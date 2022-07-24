@@ -8,7 +8,7 @@ struct BlobPreview: View {
       image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200).id(
         previousUploadLocalPath
       ).transition(.opacity.animation(.default)).onDrag {
-        if let previousUploadLocalPath {
+        if let previousUploadLocalPath = previousUploadLocalPath {
           let temporaryPath = URL(
             fileURLWithPath:
               "\(NSTemporaryDirectory())onDrag/\(previousUploadLocalPath.lastPathComponent)")
