@@ -1,31 +1,31 @@
 import SwiftUI
 
 struct BlobPopover: View {
-  @State private var uploadProgress: Double = 1.0
-  @State private var previousUploadURL: String = ""
-  @State private var previousUploadLocalPath: URL?
-  @State private var anonymousUploadsEnabled: Bool = false
+  @ObservedObject var blobGlobalState: BlobGlobalState
 
   var body: some View {
     VStack {
       HStack {
         ScreenshotButton(
-          previousUploadURL: $previousUploadURL, previousUploadLocalPath: $previousUploadLocalPath,
-          uploadProgress: $uploadProgress)
-        UploadButton(previousUploadURL: $previousUploadURL, uploadProgress: $uploadProgress)
+          previousUploadURL: $blobGlobalState.previousUploadURL,
+          previousUploadLocalPath: $blobGlobalState.previousUploadLocalPath,
+          uploadProgress: $blobGlobalState.uploadProgress)
+        UploadButton(
+          previousUploadURL: $blobGlobalState.previousUploadURL,
+          uploadProgress: $blobGlobalState.uploadProgress)
       }
 
-      UploadProgressView(uploadProgress: uploadProgress)
+      UploadProgressView(uploadProgress: blobGlobalState.uploadProgress)
 
       HStack {
-        TextField("", text: $previousUploadURL).frame(width: 208)
-        CopyButton(previousUploadURL: previousUploadURL)
-        OpenButton(previousUploadURL: previousUploadURL)
+        TextField("", text: $blobGlobalState.previousUploadURL).frame(width: 208)
+        CopyButton(previousUploadURL: blobGlobalState.previousUploadURL)
+        OpenButton(previousUploadURL: blobGlobalState.previousUploadURL)
       }
 
       Divider()
 
-      BlobPreview(previousUploadLocalPath: previousUploadLocalPath)
+      BlobPreview(previousUploadLocalPath: blobGlobalState.previousUploadLocalPath)
 
     }.padding(.all, 10).padding(.top, 10)
   }
@@ -33,6 +33,6 @@ struct BlobPopover: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    BlobPopover()
+    BlobPopover(blobGlobalState: BlobGlobalState())
   }
 }
