@@ -30,7 +30,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func configureScreenshotHotKey() {
     screenshotHotKey.keyDownHandler = {
       NSApp.activate(ignoringOtherApps: true)
-      print("Screenshot HotKey keyDown event detected.")
+      let filepath = captureScreenshot()
+      let (destinationURL, uploadTask, localPath) = uploadBlob(filepath: filepath)
+
+      uploadTask.observe(.progress) { snapshot in
+        self.blobGlobalState.uploadProgress = snapshot.progress?.fractionCompleted ?? 0
+      }
+
+      uploadTask.observe(.success) { _ in
+        NSSound(named: "Funk")?.play()
+        replaceClipboard(with: destinationURL)
+        self.blobGlobalState.previousUploadURL = destinationURL
+        self.blobGlobalState.previousUploadLocalPath = localPath
+      }
     }
   }
 
