@@ -49,7 +49,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   func configureUploadHotKey() {
     uploadHotKey.keyDownHandler = {
       NSApp.activate(ignoringOtherApps: true)
-      print("Upload HotKey keyDown event detected.")
+      let fileSelectionDialog = NSOpenPanel()
+      if fileSelectionDialog.runModal() == NSApplication.ModalResponse.OK {
+        if let filepath = fileSelectionDialog.url {
+          let (destinationURL, uploadTask, localPath) = uploadBlob(
+            filepath: filepath.path)
+
+          uploadTask.observe(.progress) { snapshot in
+            self.blobGlobalState.uploadProgress = snapshot.progress?.fractionCompleted ?? 0
+          }
+
+          uploadTask.observe(.success) { _ in
+            NSSound(named: "Funk")?.play()
+            replaceClipboard(with: destinationURL)
+            self.blobGlobalState.previousUploadURL = destinationURL
+            self.blobGlobalState.previousUploadLocalPath = localPath
+          }
+        }
+      }
     }
   }
 }
