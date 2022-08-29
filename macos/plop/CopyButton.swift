@@ -7,7 +7,7 @@ struct CopyButton: View {
     Button(action: {
       replaceClipboard(with: previousUploadURL)
     }) {
-      Image(systemName: "link.circle")
+      Image(systemName: "square.on.square")
     }
   }
 }
