@@ -9,7 +9,7 @@ struct OpenButton: View {
         NSWorkspace.shared.open(url)
       }
     }) {
-      Image(systemName: "safari")
+      Image(systemName: "arrow.up.right.square")
     }
   }
 }
