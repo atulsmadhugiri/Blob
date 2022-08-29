@@ -1,5 +1,6 @@
 import FirebaseCore
 import HotKey
+import SQLite
 import SwiftUI
 
 @NSApplicationMain
@@ -12,6 +13,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var uploadHotKey = HotKey(key: .u, modifiers: [.command, .shift])
 
   func applicationDidFinishLaunching(_: Notification) {
+    initializeSQLiteDB()
     FirebaseApp.configure()
     configureScreenshotHotKey()
     configureUploadHotKey()
@@ -25,6 +27,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     popover.behavior = NSPopover.Behavior.transient
 
     statusBar = StatusBar(popover)
+  }
+
+  func initializeSQLiteDB() {
+    let fileManager = FileManager.default
+    if let appSupportDirectoryURL = fileManager.urls(
+      for: .applicationSupportDirectory, in: .userDomainMask
+    ).first {
+      let blobSupportDirectoryURL = appSupportDirectoryURL.appendingPathComponent(
+        Bundle.main.bundleIdentifier!)
+      do {
+        try fileManager.createDirectory(
+          at: blobSupportDirectoryURL, withIntermediateDirectories: true)
+        let _ = try Connection(
+          blobSupportDirectoryURL.appendingPathComponent("clientDB.sqlite3").absoluteString)
+      } catch {
+        print(error)
+      }
+    }
   }
 
   func configureScreenshotHotKey() {
