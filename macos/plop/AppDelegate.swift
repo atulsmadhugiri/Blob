@@ -61,8 +61,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       uploadTask.observe(.success) { _ in
         NSSound(named: "Funk")?.play()
         replaceClipboard(with: destinationURL)
-        self.blobGlobalState.blobEntries[0].previousUploadURL = destinationURL
-        self.blobGlobalState.blobEntries[0].previousUploadLocalPath = localPath
+        self.blobGlobalState.blobEntries[0].uploadURL = destinationURL
+        self.blobGlobalState.blobEntries[0].uploadLocalPath = localPath
       }
     }
   }
@@ -84,8 +84,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           uploadTask.observe(.success) { _ in
             NSSound(named: "Funk")?.play()
             replaceClipboard(with: destinationURL)
-            self.blobGlobalState.blobEntries[0].previousUploadURL = destinationURL
-            self.blobGlobalState.blobEntries[0].previousUploadLocalPath = localPath
+            self.blobGlobalState.blobEntries[0].uploadURL = destinationURL
+            self.blobGlobalState.blobEntries[0].uploadLocalPath = localPath
           }
         }
       }
