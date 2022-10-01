@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct BlobPopover: View {
-  @ObservedObject var blobGlobalState: BlobGlobalState
+  @ObservedObject var blobGlobalState: BlobEntry
 
   var body: some View {
     VStack {
@@ -33,6 +33,6 @@ struct BlobPopover: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    BlobPopover(blobGlobalState: BlobGlobalState())
+    BlobPopover(blobGlobalState: BlobGlobalState().blobEntries[0])
   }
 }

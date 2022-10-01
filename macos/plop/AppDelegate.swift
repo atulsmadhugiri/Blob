@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // We use NSPopover in place of NSWindow so icon appears in menubar.
     // Credit: Anagh Sharma (https://github.com/AnaghSharma)
-    let contentView = BlobPopover(blobGlobalState: blobGlobalState)
+    let contentView = BlobPopover(blobGlobalState: blobGlobalState.blobEntries[0])
     popover.contentSize = NSSize(width: 360, height: 360)
     popover.contentViewController = NSHostingController(rootView: contentView)
     popover.animates = false
@@ -54,14 +54,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       let (destinationURL, uploadTask, localPath) = uploadBlob(filepath: filepath)
 
       uploadTask.observe(.progress) { snapshot in
-        self.blobGlobalState.uploadProgress = snapshot.progress?.fractionCompleted ?? 0
+        self.blobGlobalState.blobEntries[0].uploadProgress =
+          snapshot.progress?.fractionCompleted ?? 0
       }
 
       uploadTask.observe(.success) { _ in
         NSSound(named: "Funk")?.play()
         replaceClipboard(with: destinationURL)
-        self.blobGlobalState.previousUploadURL = destinationURL
-        self.blobGlobalState.previousUploadLocalPath = localPath
+        self.blobGlobalState.blobEntries[0].previousUploadURL = destinationURL
+        self.blobGlobalState.blobEntries[0].previousUploadLocalPath = localPath
       }
     }
   }
@@ -76,14 +77,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             filepath: filepath.path)
 
           uploadTask.observe(.progress) { snapshot in
-            self.blobGlobalState.uploadProgress = snapshot.progress?.fractionCompleted ?? 0
+            self.blobGlobalState.blobEntries[0].uploadProgress =
+              snapshot.progress?.fractionCompleted ?? 0
           }
 
           uploadTask.observe(.success) { _ in
             NSSound(named: "Funk")?.play()
             replaceClipboard(with: destinationURL)
-            self.blobGlobalState.previousUploadURL = destinationURL
-            self.blobGlobalState.previousUploadLocalPath = localPath
+            self.blobGlobalState.blobEntries[0].previousUploadURL = destinationURL
+            self.blobGlobalState.blobEntries[0].previousUploadLocalPath = localPath
           }
         }
       }
