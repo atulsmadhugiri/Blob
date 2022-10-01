@@ -33,6 +33,6 @@ struct BlobPopover: View {
 
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
-    BlobPopover(blobGlobalState: BlobGlobalState().blobEntries[0])
+    BlobPopover(blobGlobalState: BlobGlobalState().blobEntries.last!)
   }
 }
