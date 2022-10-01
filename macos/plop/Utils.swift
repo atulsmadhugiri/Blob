@@ -37,7 +37,7 @@ func uploadBlob(filepath: String) -> (
   let destinationRef = storageBucket.child("\(filename)")
   let destinationURL = "https://\(GCLOUD_STORAGE_BUCKET)\(filename)"
 
-  let uploadTask = destinationRef.putFile(from: URL(fileURLWithPath: filepath)) { _, error in
+  let uploadTask: StorageUploadTask = destinationRef.putFile(from: URL(fileURLWithPath: filepath)) { _, error in
     if let error {
       print("Error uploading file to Google Cloud Storage: \(error)")
     }
