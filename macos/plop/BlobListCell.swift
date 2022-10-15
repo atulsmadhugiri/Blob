@@ -11,7 +11,7 @@ struct BlobListCell: View {
       AsyncImage(url: imagePath) { image in
         image.resizable().scaledToFit().cornerRadius(8).frame(width: 48, height: 48)
       } placeholder: {
-        Color.red.opacity(0.1).cornerRadius(8).frame(width: 48, height: 48)
+        Color.gray.opacity(0.1).cornerRadius(8).frame(width: 48, height: 48)
       }
       VStack(alignment: .leading) {
         Text(filename).font(.headline)
