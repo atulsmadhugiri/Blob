@@ -21,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     // We use NSPopover in place of NSWindow so icon appears in menubar.
     // Credit: Anagh Sharma (https://github.com/AnaghSharma)
     let contentView = BlobPopover(blobGlobalState: blobGlobalState.blobEntries.last!)
-    popover.contentSize = NSSize(width: 360, height: 360)
+    popover.contentSize = NSSize(width: 360, height: 560)
     popover.contentViewController = NSHostingController(rootView: contentView)
     popover.animates = false
     popover.behavior = NSPopover.Behavior.transient
