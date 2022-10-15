@@ -41,6 +41,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           at: blobSupportDirectoryURL, withIntermediateDirectories: true)
         let _ = try Connection(
           blobSupportDirectoryURL.appendingPathComponent("clientDB.sqlite3").absoluteString)
+        print(
+          "Client DB created at: \(blobSupportDirectoryURL.appendingPathComponent("clientDB.sqlite3").absoluteString)"
+        )
       } catch {
         print(error)
       }
