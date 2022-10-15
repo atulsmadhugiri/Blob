@@ -27,6 +27,9 @@ struct BlobPopover: View {
 
       BlobPreview(previousUploadLocalPath: blobGlobalState.uploadLocalPath)
 
+      Divider()
+
+      BlobList()
     }.padding(.all, 10).padding(.top, 10)
   }
 }
