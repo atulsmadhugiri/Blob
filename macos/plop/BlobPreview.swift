@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct BlobPreview: View {
-  var previousUploadLocalPath: URL?
+  @Binding var previousUploadLocalPath: URL?
 
   var body: some View {
     AsyncImage(url: previousUploadLocalPath) { image in
@@ -34,6 +34,6 @@ struct BlobPreview: View {
 
 struct BlobPreview_Previews: PreviewProvider {
   static var previews: some View {
-    BlobPreview()
+    BlobPreview(previousUploadLocalPath: .constant(nil))
   }
 }

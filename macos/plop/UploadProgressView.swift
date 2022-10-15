@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct UploadProgressView: View {
-  var uploadProgress: Double
+  @Binding var uploadProgress: Double
 
   var body: some View {
     ProgressView("", value: uploadProgress, total: 1.0).padding(.horizontal, 20)
@@ -10,6 +10,6 @@ struct UploadProgressView: View {
 
 struct UploadProgressView_Previews: PreviewProvider {
   static var previews: some View {
-    UploadProgressView(uploadProgress: 0.5)
+    UploadProgressView(uploadProgress: .constant(0.5))
   }
 }

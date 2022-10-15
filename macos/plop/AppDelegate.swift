@@ -20,7 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     // We use NSPopover in place of NSWindow so icon appears in menubar.
     // Credit: Anagh Sharma (https://github.com/AnaghSharma)
-    let contentView = BlobPopover(blobGlobalState: blobGlobalState.blobEntries.last!)
+    let contentView = BlobPopover(blobGlobalState: blobGlobalState)
     popover.contentSize = NSSize(width: 360, height: 560)
     popover.contentViewController = NSHostingController(rootView: contentView)
     popover.animates = false
@@ -64,8 +64,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       uploadTask.observe(.success) { _ in
         NSSound(named: "Funk")?.play()
         replaceClipboard(with: destinationURL)
-        self.blobGlobalState.blobEntries.last?.uploadURL = destinationURL
-        self.blobGlobalState.blobEntries.last?.uploadLocalPath = localPath
+        let blobEntry = BlobEntry()
+        blobEntry.uploadURL = destinationURL
+        blobEntry.uploadLocalPath = localPath
+        self.blobGlobalState.blobEntries.append(blobEntry)
       }
     }
   }
@@ -87,8 +89,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           uploadTask.observe(.success) { _ in
             NSSound(named: "Funk")?.play()
             replaceClipboard(with: destinationURL)
-            self.blobGlobalState.blobEntries.last?.uploadURL = destinationURL
-            self.blobGlobalState.blobEntries.last?.uploadLocalPath = localPath
+            let blobEntry = BlobEntry()
+            blobEntry.uploadURL = destinationURL
+            blobEntry.uploadLocalPath = localPath
+            self.blobGlobalState.blobEntries.append(blobEntry)
           }
         }
       }
