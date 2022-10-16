@@ -1,7 +1,7 @@
 import FirebaseStorage
 import Foundation
 
-class BlobEntry: ObservableObject {
+class BlobEntry: ObservableObject, Identifiable {
   @Published var uploadProgress: Double = 1.0
   @Published var uploadURL: String = ""
   @Published var uploadLocalPath: URL?
@@ -9,5 +9,5 @@ class BlobEntry: ObservableObject {
 }
 
 class BlobGlobalState: ObservableObject {
-  @Published var blobEntries: [BlobEntry] = [BlobEntry()]
+  @Published var blobEntries: [BlobEntry] = []
 }

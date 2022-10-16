@@ -7,29 +7,37 @@ struct BlobPopover: View {
     VStack {
       HStack {
         ScreenshotButton(
-          previousUploadURL: $blobGlobalState.blobEntries.last!.uploadURL,
-          previousUploadLocalPath: $blobGlobalState.blobEntries.last!.uploadLocalPath,
-          uploadProgress: $blobGlobalState.blobEntries.last!.uploadProgress)
+          blobGlobalState: blobGlobalState,
+          uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
         UploadButton(
-          previousUploadURL: $blobGlobalState.blobEntries.last!.uploadURL,
-          uploadProgress: $blobGlobalState.blobEntries.last!.uploadProgress)
+          previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""),
+          uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
       }
 
-      UploadProgressView(uploadProgress: $blobGlobalState.blobEntries.last!.uploadProgress)
+      UploadProgressView(
+        uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
 
       HStack {
-        TextField("", text: $blobGlobalState.blobEntries.last!.uploadURL).frame(width: 208)
-        CopyButton(previousUploadURL: $blobGlobalState.blobEntries.last!.uploadURL)
-        OpenButton(previousUploadURL: $blobGlobalState.blobEntries.last!.uploadURL)
+        TextField("", text: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant("")).frame(
+          width: 208)
+        CopyButton(previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""))
+        OpenButton(previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""))
       }
 
       Divider()
 
-      BlobPreview(previousUploadLocalPath: $blobGlobalState.blobEntries.last!.uploadLocalPath)
+      BlobPreview(
+        previousUploadLocalPath: $blobGlobalState.blobEntries.last?.uploadLocalPath
+          ?? .constant(URL(string: "")))
 
       Divider()
 
-      BlobList()
+      List {
+        ForEach($blobGlobalState.blobEntries) { blobEntry in
+          BlobListCell(blobEntry: blobEntry)
+        }
+      }.listStyle(.sidebar)
+
     }.padding(.all, 10).padding(.top, 10)
   }
 }

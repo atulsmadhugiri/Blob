@@ -1,8 +1,7 @@
 import SwiftUI
 
 struct ScreenshotButton: View {
-  @Binding var previousUploadURL: String
-  @Binding var previousUploadLocalPath: URL?
+  @ObservedObject var blobGlobalState: BlobGlobalState
   @Binding var uploadProgress: Double
 
   var body: some View {
@@ -16,8 +15,10 @@ struct ScreenshotButton: View {
       uploadTask.observe(.success) { _ in
         NSSound(named: "Funk")?.play()
         replaceClipboard(with: destinationURL)
-        previousUploadURL = destinationURL
-        previousUploadLocalPath = localPath
+        let blobEntry = BlobEntry()
+        blobEntry.uploadURL = destinationURL
+        blobEntry.uploadLocalPath = localPath
+        blobGlobalState.blobEntries.append(blobEntry)
       }
     }) {
       Text("Screenshot (")
@@ -31,7 +32,7 @@ struct ScreenshotButton: View {
 struct ScreenshotButton_Previews: PreviewProvider {
   static var previews: some View {
     ScreenshotButton(
-      previousUploadURL: .constant("https://google.com"), previousUploadLocalPath: .constant(nil),
+      blobGlobalState: BlobGlobalState(),
       uploadProgress: .constant(1.0))
   }
 }
