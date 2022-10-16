@@ -7,7 +7,7 @@ struct BlobListCell: View {
 
   var body: some View {
     HStack {
-      BlobPreview(previousUploadLocalPath: $blobEntry.uploadLocalPath, width: 96, height: 96)
+      BlobPreview(previousUploadLocalPath: $blobEntry.uploadLocalPath, width: 96, height: 64)
       VStack(alignment: .leading) {
         Text(blobEntry.uploadLocalPath?.lastPathComponent ?? "").font(.headline)
         HStack {
