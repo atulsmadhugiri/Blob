@@ -2,10 +2,12 @@ import SwiftUI
 
 struct BlobPreview: View {
   @Binding var previousUploadLocalPath: URL?
+  var width: CGFloat = 300
+  var height: CGFloat = 200
 
   var body: some View {
     AsyncImage(url: previousUploadLocalPath) { image in
-      image.resizable().scaledToFit().cornerRadius(8).frame(width: 300, height: 200).id(
+      image.resizable().scaledToFit().cornerRadius(8).frame(width: width, height: height).id(
         previousUploadLocalPath
       ).transition(.opacity.animation(.default)).onDrag {
         if let previousUploadLocalPath {
