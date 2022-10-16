@@ -7,11 +7,7 @@ struct BlobListCell: View {
 
   var body: some View {
     HStack {
-      AsyncImage(url: blobEntry.uploadLocalPath) { image in
-        image.resizable().scaledToFit().cornerRadius(8).frame(width: 48, height: 48)
-      } placeholder: {
-        Color.gray.opacity(0.1).cornerRadius(8).frame(width: 48, height: 48)
-      }
+      BlobPreview(previousUploadLocalPath: $blobEntry.uploadLocalPath, width: 96, height: 96)
       VStack(alignment: .leading) {
         Text(blobEntry.uploadLocalPath?.lastPathComponent ?? "").font(.headline)
         HStack {
