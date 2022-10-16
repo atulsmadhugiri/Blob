@@ -19,6 +19,9 @@ struct BlobListCell: View {
           Text(filesize ?? "[filesize]").font(.caption2.monospaced()).foregroundColor(.gray)
         }
       }
+      Spacer()
+      CopyButton(previousUploadURL: .constant(blobEntry.uploadURL))
+      OpenButton(previousUploadURL: .constant(blobEntry.uploadURL))
     }
   }
 }
