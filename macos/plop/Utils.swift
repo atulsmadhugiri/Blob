@@ -45,3 +45,14 @@ func uploadBlob(filepath: String) -> (
 
   return (destinationURL, uploadTask, URL(fileURLWithPath: filepath))
 }
+
+func getFormattedFileSize(fromURL url: URL) -> String? {
+  do {
+    let resourceValues = try url.resourceValues(forKeys: [.fileSizeKey])
+    let fileSize = resourceValues.fileSize!
+    return ByteCountFormatter().string(fromByteCount: Int64(fileSize))
+  } catch {
+    print("Error getting formatted fileSize from URL.")
+  }
+  return nil
+}
