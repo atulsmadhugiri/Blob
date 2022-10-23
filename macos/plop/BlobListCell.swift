@@ -2,7 +2,6 @@ import SwiftUI
 
 struct BlobListCell: View {
   @Binding var blobEntry: BlobEntry
-  var fileMIME: String?
 
   var body: some View {
     HStack {
@@ -10,7 +9,7 @@ struct BlobListCell: View {
       VStack(alignment: .leading) {
         Text(blobEntry.uploadLocalPath?.lastPathComponent ?? "").font(.headline)
         HStack {
-          Text(fileMIME ?? "[mime]").font(.caption2.monospaced())
+          Text(blobEntry.mimeType ?? "[mime]").font(.caption2.monospaced())
           Text(blobEntry.fileSize ?? "[filesize]").font(.caption2.monospaced()).foregroundColor(
             .gray)
         }
