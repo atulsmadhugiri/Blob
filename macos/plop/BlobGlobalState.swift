@@ -6,6 +6,7 @@ class BlobEntry: ObservableObject, Identifiable {
   @Published var uploadURL: String = ""
   @Published var uploadLocalPath: URL?
   @Published var uploadTask: StorageUploadTask?
+  @Published var fileSize: String?
 }
 
 class BlobGlobalState: ObservableObject {
