@@ -1,6 +1,7 @@
 import AppKit
 import FirebaseStorage
 import Foundation
+import UniformTypeIdentifiers
 
 func replaceClipboard(with newString: String) {
   let pasteboard = NSPasteboard.general
@@ -53,6 +54,13 @@ func getFormattedFileSize(fromURL url: URL) -> String? {
     return ByteCountFormatter().string(fromByteCount: Int64(fileSize))
   } catch {
     print("Error getting formatted fileSize from URL.")
+  }
+  return nil
+}
+
+func getMIMEType(fromURL url: URL) -> String? {
+  if let pathSuffix = UTType(filenameExtension: url.pathExtension) {
+    return pathSuffix.preferredMIMEType
   }
   return nil
 }
