@@ -9,9 +9,9 @@ struct BlobListCell: View {
       VStack(alignment: .leading) {
         Text(blobEntry.uploadLocalPath?.lastPathComponent ?? "").font(.headline)
         HStack {
-          Text(blobEntry.mimeType ?? "[mime]").font(.caption2.monospaced())
           Text(blobEntry.fileSize ?? "[filesize]").font(.caption2.monospaced()).foregroundColor(
             .gray)
+          Text(blobEntry.mimeType ?? "[mime]").font(.caption2.monospaced())
         }
       }
       Spacer()
