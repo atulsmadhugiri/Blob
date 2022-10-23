@@ -18,6 +18,7 @@ struct ScreenshotButton: View {
         let blobEntry = BlobEntry()
         blobEntry.uploadURL = destinationURL
         blobEntry.uploadLocalPath = localPath
+        blobEntry.fileSize = getFormattedFileSize(fromURL: localPath)
         blobGlobalState.blobEntries.append(blobEntry)
       }
     }) {
