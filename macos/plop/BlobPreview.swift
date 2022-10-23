@@ -11,9 +11,14 @@ struct BlobPreview: View {
         previousUploadLocalPath
       ).transition(.opacity.animation(.default)).onDrag {
         if let previousUploadLocalPath {
-          let temporaryPath = URL(
-            fileURLWithPath:
-              "\(NSTemporaryDirectory())onDrag/\(previousUploadLocalPath.lastPathComponent)")
+          let temporaryPathString = "\(NSTemporaryDirectory())onDrag/\(previousUploadLocalPath.lastPathComponent)"
+          let temporaryPath = URL(fileURLWithPath: temporaryPathString)
+          if (FileManager().fileExists(atPath: temporaryPathString)) {
+            if let provider = NSItemProvider(contentsOf: temporaryPath) {
+              provider.suggestedName = previousUploadLocalPath.lastPathComponent
+              return provider
+            }
+          }
           do {
             try FileManager().createDirectory(
               at: temporaryPath.deletingLastPathComponent(), withIntermediateDirectories: true)
