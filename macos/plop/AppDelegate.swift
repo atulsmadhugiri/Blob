@@ -68,6 +68,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         blobEntry.uploadURL = destinationURL
         blobEntry.uploadLocalPath = localPath
         blobEntry.fileSize = getFormattedFileSize(fromURL: localPath)
+        blobEntry.mimeType = getMIMEType(fromURL: localPath)
         self.blobGlobalState.blobEntries.append(blobEntry)
       }
     }
@@ -94,6 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             blobEntry.uploadURL = destinationURL
             blobEntry.uploadLocalPath = localPath
             blobEntry.fileSize = getFormattedFileSize(fromURL: localPath)
+            blobEntry.mimeType = getMIMEType(fromURL: localPath)
             self.blobGlobalState.blobEntries.append(blobEntry)
           }
         }
