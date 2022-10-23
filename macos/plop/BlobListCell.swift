@@ -2,7 +2,6 @@ import SwiftUI
 
 struct BlobListCell: View {
   @Binding var blobEntry: BlobEntry
-  var filesize: String?
   var fileMIME: String?
 
   var body: some View {
@@ -12,7 +11,7 @@ struct BlobListCell: View {
         Text(blobEntry.uploadLocalPath?.lastPathComponent ?? "").font(.headline)
         HStack {
           Text(fileMIME ?? "[mime]").font(.caption2.monospaced())
-          Text(filesize ?? "[filesize]").font(.caption2.monospaced()).foregroundColor(.gray)
+          Text(blobEntry.fileSize ?? "[filesize]").font(.caption2.monospaced()).foregroundColor(.gray)
         }
       }
       Spacer()
