@@ -10,13 +10,15 @@ struct BlobListCell: View {
         Text(blobEntry.uploadLocalPath?.lastPathComponent ?? "").font(.headline)
         HStack {
           Text(blobEntry.fileSize ?? "[filesize]").font(.caption2.monospaced())
-          Text("[\(blobEntry.mimeType ?? "mime")]" ).font(.caption2.monospaced()).foregroundColor(
+          Text("[\(blobEntry.mimeType ?? "mime")]").font(.caption2.monospaced()).foregroundColor(
             .gray)
         }
       }
       Spacer()
-      CopyButton(previousUploadURL: .constant(blobEntry.uploadURL))
-      OpenButton(previousUploadURL: .constant(blobEntry.uploadURL))
+      VStack {
+        CopyButton(previousUploadURL: .constant(blobEntry.uploadURL))
+        OpenButton(previousUploadURL: .constant(blobEntry.uploadURL))
+      }
     }
   }
 }
