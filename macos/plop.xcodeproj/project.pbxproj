@@ -17,6 +17,7 @@
 		B70755722844483C005D4C51 /* UploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70755712844483C005D4C51 /* UploadButton.swift */; };
 		B70755742844499E005D4C51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70755732844499E005D4C51 /* Utils.swift */; };
 		B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70A98B924DBFD88007DBA7F /* StatusBar.swift */; };
+		B71ABFA0290EF74F0033E3E6 /* BlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71ABF9F290EF74F0033E3E6 /* BlobTests.swift */; };
 		B721CFB7285F833B00B945C9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B721CFB6285F833B00B945C9 /* FirebaseStorage */; };
 		B721CFBA285F839900B945C9 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = B721CFB9285F839900B945C9 /* HotKey */; };
 		B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76CD613276E5716005F1A93 /* GoogleService-Info.plist */; };
@@ -28,6 +29,16 @@
 		B7BDCC60286D69B700B668CC /* BlobPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDCC5F286D69B700B668CC /* BlobPreview.swift */; };
 		B7F0B23C28F3897800BECCBA /* BlobListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0B23B28F3897800BECCBA /* BlobListCell.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B71ABFA1290EF74F0033E3E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B703FDF224D2A89500ADC7A0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B703FDF924D2A89500ADC7A0;
+			remoteInfo = plop;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		B7BB43482568EBB400C46F41 /* Embed Frameworks */ = {
@@ -56,6 +67,8 @@
 		B70755712844483C005D4C51 /* UploadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadButton.swift; sourceTree = "<group>"; };
 		B70755732844499E005D4C51 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B70A98B924DBFD88007DBA7F /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
+		B71ABF9D290EF74F0033E3E6 /* BlobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71ABF9F290EF74F0033E3E6 /* BlobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobTests.swift; sourceTree = "<group>"; };
 		B76CD613276E5716005F1A93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		B7B5AB3C285F8C7500C98B70 /* UploadProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProgressView.swift; sourceTree = "<group>"; };
 		B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
@@ -76,6 +89,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B71ABF9A290EF74F0033E3E6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B703FDFC24D2A89500ADC7A0 /* plop */,
+				B71ABF9E290EF74F0033E3E6 /* BlobTests */,
 				B703FDFB24D2A89500ADC7A0 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				B703FDFA24D2A89500ADC7A0 /* plop.app */,
+				B71ABF9D290EF74F0033E3E6 /* BlobTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,6 +151,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		B71ABF9E290EF74F0033E3E6 /* BlobTests */ = {
+			isa = PBXGroup;
+			children = (
+				B71ABF9F290EF74F0033E3E6 /* BlobTests.swift */,
+			);
+			path = BlobTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +185,24 @@
 			productReference = B703FDFA24D2A89500ADC7A0 /* plop.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B71ABF9C290EF74F0033E3E6 /* BlobTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B71ABFA3290EF74F0033E3E6 /* Build configuration list for PBXNativeTarget "BlobTests" */;
+			buildPhases = (
+				B71ABF99290EF74F0033E3E6 /* Sources */,
+				B71ABF9A290EF74F0033E3E6 /* Frameworks */,
+				B71ABF9B290EF74F0033E3E6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B71ABFA2290EF74F0033E3E6 /* PBXTargetDependency */,
+			);
+			name = BlobTests;
+			productName = BlobTests;
+			productReference = B71ABF9D290EF74F0033E3E6 /* BlobTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -162,11 +210,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					B703FDF924D2A89500ADC7A0 = {
 						CreatedOnToolsVersion = 12.0;
+					};
+					B71ABF9C290EF74F0033E3E6 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = B703FDF924D2A89500ADC7A0;
 					};
 				};
 			};
@@ -189,6 +241,7 @@
 			projectRoot = "";
 			targets = (
 				B703FDF924D2A89500ADC7A0 /* plop */,
+				B71ABF9C290EF74F0033E3E6 /* BlobTests */,
 			);
 		};
 /* End PBXProject section */
@@ -202,6 +255,13 @@
 				B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */,
 				B703FE0524D2A89500ADC7A0 /* Preview Assets.xcassets in Resources */,
 				B703FE0224D2A89500ADC7A0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B71ABF9B290EF74F0033E3E6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +288,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B71ABF99290EF74F0033E3E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B71ABFA0290EF74F0033E3E6 /* BlobTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B71ABFA2290EF74F0033E3E6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B703FDF924D2A89500ADC7A0 /* plop */;
+			targetProxy = B71ABFA1290EF74F0033E3E6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B703FE0624D2A89500ADC7A0 /* Main.storyboard */ = {
@@ -419,6 +495,52 @@
 			};
 			name = Release;
 		};
+		B71ABFA4290EF74F0033E3E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HM6Y2RQS2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = atul.BlobTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/plop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/plop";
+			};
+			name = Debug;
+		};
+		B71ABFA5290EF74F0033E3E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HM6Y2RQS2R;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = atul.BlobTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/plop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/plop";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -436,6 +558,15 @@
 			buildConfigurations = (
 				B703FE0E24D2A89500ADC7A0 /* Debug */,
 				B703FE0F24D2A89500ADC7A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B71ABFA3290EF74F0033E3E6 /* Build configuration list for PBXNativeTarget "BlobTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B71ABFA4290EF74F0033E3E6 /* Debug */,
+				B71ABFA5290EF74F0033E3E6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
