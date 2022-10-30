@@ -8,6 +8,7 @@ class BlobEntry: ObservableObject, Identifiable {
   @Published var uploadTask: StorageUploadTask?
   @Published var fileSize: String?
   @Published var mimeType: String?
+  @Published var uploadedAt: Date?
 }
 
 class BlobGlobalState: ObservableObject {
