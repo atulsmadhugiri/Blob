@@ -63,3 +63,10 @@ func getMIMEType(fromURL url: URL) -> String? {
   }
   return nil
 }
+
+func getFormattedDateTime(fromDate date: Date) -> String {
+  let fmt = DateFormatter()
+  fmt.dateStyle = .medium
+  fmt.timeStyle = .short
+  return fmt.string(from: date)
+}
