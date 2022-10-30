@@ -18,6 +18,7 @@
 		B70755742844499E005D4C51 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70755732844499E005D4C51 /* Utils.swift */; };
 		B70A98BA24DBFD88007DBA7F /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70A98B924DBFD88007DBA7F /* StatusBar.swift */; };
 		B71ABFA0290EF74F0033E3E6 /* BlobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71ABF9F290EF74F0033E3E6 /* BlobTests.swift */; };
+		B71ABFA7290EF9300033E3E6 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70755732844499E005D4C51 /* Utils.swift */; };
 		B721CFB7285F833B00B945C9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B721CFB6285F833B00B945C9 /* FirebaseStorage */; };
 		B721CFBA285F839900B945C9 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = B721CFB9285F839900B945C9 /* HotKey */; };
 		B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76CD613276E5716005F1A93 /* GoogleService-Info.plist */; };
@@ -293,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B71ABFA0290EF74F0033E3E6 /* BlobTests.swift in Sources */,
+				B71ABFA7290EF9300033E3E6 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
