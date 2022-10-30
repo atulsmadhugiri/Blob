@@ -21,7 +21,6 @@ func captureScreenshot() -> String {
   let screenCaptureTask = Process()
   screenCaptureTask.launchPath = "/usr/sbin/screencapture"
   screenCaptureTask.arguments = ["-i", "-r", destinationPath]
-  screenCaptureTask.qualityOfService = .userInteractive
 
   screenCaptureTask.launch()
   screenCaptureTask.waitUntilExit()
