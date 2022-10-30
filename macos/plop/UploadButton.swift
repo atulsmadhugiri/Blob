@@ -10,10 +10,8 @@ struct UploadButton: View {
     Button(action: {
       fileSelectionDialogPresented = true
     }) {
-      Text("Upload (")
-      Image(systemName: "command")
-      Image(systemName: "shift")
-      Text("U )")
+      Image(systemName: "icloud.and.arrow.up")
+      Text("Upload")
     }.fileImporter(
       isPresented: $fileSelectionDialogPresented,
       allowedContentTypes: [.image, .audio, .video, .text, .data]

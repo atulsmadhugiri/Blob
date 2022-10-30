@@ -23,10 +23,8 @@ struct ScreenshotButton: View {
         blobGlobalState.blobEntries.append(blobEntry)
       }
     }) {
-      Text("Screenshot (")
-      Image(systemName: "command")
-      Image(systemName: "shift")
-      Text("Z )")
+      Image(systemName: "viewfinder")
+      Text("Screenshot")
     }
   }
 }
