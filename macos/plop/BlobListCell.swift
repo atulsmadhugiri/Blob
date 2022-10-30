@@ -13,6 +13,8 @@ struct BlobListCell: View {
           Text("[\(blobEntry.mimeType ?? "mime")]").font(.caption2.monospaced()).foregroundColor(
             .gray)
         }
+        Text(getFormattedDateTime(fromDate: blobEntry.uploadedAt ?? Date(timeIntervalSince1970: 0)))
+          .font(.caption.monospaced())
       }
       Spacer()
       VStack {
