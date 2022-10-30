@@ -9,6 +9,7 @@ struct BlobPopover: View {
         ScreenshotButton(
           blobGlobalState: blobGlobalState,
           uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
+        RecordButton()
         UploadButton(
           previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""),
           uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
