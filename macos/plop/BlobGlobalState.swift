@@ -2,6 +2,7 @@ import FirebaseStorage
 import Foundation
 
 class BlobEntry: ObservableObject, Identifiable {
+  @Published var id = UUID()
   @Published var uploadProgress: Double = 1.0
   @Published var uploadURL: String = ""
   @Published var uploadLocalPath: URL?

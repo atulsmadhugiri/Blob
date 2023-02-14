@@ -34,7 +34,7 @@ struct BlobPopover: View {
       Divider()
 
       List {
-        ForEach($blobGlobalState.blobEntries) { blobEntry in
+        ForEach($blobGlobalState.blobEntries.reversed(), id: \.id) { blobEntry in
           BlobListCell(blobEntry: blobEntry)
         }
       }.listStyle(.sidebar)
