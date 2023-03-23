@@ -7,7 +7,7 @@ struct BlobPreview: View {
 
   var body: some View {
     AsyncImage(url: previousUploadLocalPath) { image in
-      image.resizable().scaledToFit().cornerRadius(8).frame(width: width, height: height).id(
+      image.interpolation(.none).resizable().scaledToFit().cornerRadius(8).frame(width: width, height: height).id(
         previousUploadLocalPath
       ).transition(.opacity.animation(.default)).onDrag {
         if let previousUploadLocalPath {
