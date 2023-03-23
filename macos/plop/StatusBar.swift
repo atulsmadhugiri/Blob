@@ -9,7 +9,7 @@ class StatusBar {
 
   init(_ popover: NSPopover) {
     self.popover = popover
-    statusBar = NSStatusBar()
+    statusBar = NSStatusBar.system
     statusItem = statusBar.statusItem(withLength: 28.0)
 
     if let statusBarButton = statusItem.button {
