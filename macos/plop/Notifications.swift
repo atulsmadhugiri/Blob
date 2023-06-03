@@ -13,9 +13,23 @@ func successfulBlobNotification(blobEntry: BlobEntry) {
       notifContent.body = blobEntry.fileSize ?? "FILE SIZE"
 
       do {
+        let filename = blobEntry.uploadLocalPath!.lastpathComponent
+        let temporaryPath: String = "\(NSTemporaryDirectory())notifAttach/\(filename)"
+        let temporaryPathURL: URL = URL(fileURLWithPath: temporaryPath)
+
+        try FileManager().createDirectory(
+          at: temporaryPathURL.deletingLastPathComponent(),
+          withIntermediateDirectories: true
+        )
+
+        try FileManager().copyItem(
+          at: blobEntry.uploadLocalPath!,
+          to: temporaryPathURL
+        )
+
         let notifAttachment = try UNNotificationAttachment(
           identifier: "image",
-          url: blobEntry.uploadLocalPath!
+          url: temporaryPathURL
         )
         notifContent.attachments = [notifAttachment]
       } catch {
