@@ -2,6 +2,7 @@ import FirebaseCore
 import HotKey
 import SQLite
 import SwiftUI
+import UserNotifications
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -17,6 +18,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     FirebaseApp.configure()
     configureScreenshotHotKey()
     configureUploadHotKey()
+
+    let notificationCenter = UNUserNotificationCenter.current()
+    notificationCenter.requestAuthorization(options: [.alert, .badge]) { (granted, error: Error?) in
+      if let error = error {
+        print("Error: \(error.localizedDescription)")
+      }
+
+      print(
+        granted
+          ? "Notification permission granted."
+          : "Notification permission denied."
+      )
+    }
 
     // We use NSPopover in place of NSWindow so icon appears in menubar.
     // Credit: Anagh Sharma (https://github.com/AnaghSharma)
