@@ -84,6 +84,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         blobEntry.fileSize = getFormattedFileSize(fromURL: localPath)
         blobEntry.mimeType = getMIMEType(fromURL: localPath)
         blobEntry.uploadedAt = Date()
+        successfulBlobNotification(blobEntry: blobEntry)
         self.blobGlobalState.blobEntries.append(blobEntry)
       }
     }
@@ -112,6 +113,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             blobEntry.fileSize = getFormattedFileSize(fromURL: localPath)
             blobEntry.mimeType = getMIMEType(fromURL: localPath)
             blobEntry.uploadedAt = Date()
+            successfulBlobNotification(blobEntry: blobEntry)
             self.blobGlobalState.blobEntries.append(blobEntry)
           }
         }

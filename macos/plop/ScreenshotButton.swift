@@ -21,6 +21,7 @@ struct ScreenshotButton: View {
         blobEntry.fileSize = getFormattedFileSize(fromURL: localPath)
         blobEntry.mimeType = getMIMEType(fromURL: localPath)
         blobEntry.uploadedAt = Date()
+        successfulBlobNotification(blobEntry: blobEntry)
         blobGlobalState.blobEntries.append(blobEntry)
       }
     }) {

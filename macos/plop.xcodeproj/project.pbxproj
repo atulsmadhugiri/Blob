@@ -29,6 +29,7 @@
 		B7B5D62D285EF39400E8BC8A /* OpenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62C285EF39400E8BC8A /* OpenButton.swift */; };
 		B7B5D62F285EF8D200E8BC8A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62E285EF8D200E8BC8A /* Constants.swift */; };
 		B7BDCC60286D69B700B668CC /* BlobPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDCC5F286D69B700B668CC /* BlobPreview.swift */; };
+		B7E7B3C02A2BB7380042F7D5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7B3BF2A2BB7380042F7D5 /* Notifications.swift */; };
 		B7F0B23C28F3897800BECCBA /* BlobListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0B23B28F3897800BECCBA /* BlobListCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +79,7 @@
 		B7B5D62C285EF39400E8BC8A /* OpenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenButton.swift; sourceTree = "<group>"; };
 		B7B5D62E285EF8D200E8BC8A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		B7BDCC5F286D69B700B668CC /* BlobPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPreview.swift; sourceTree = "<group>"; };
+		B7E7B3BF2A2BB7380042F7D5 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		B7F0B23B28F3897800BECCBA /* BlobListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +145,7 @@
 				B7BDCC5F286D69B700B668CC /* BlobPreview.swift */,
 				2DDA0DC01E5C360C974AF4A3 /* BlobGlobalState.swift */,
 				B7F0B23B28F3897800BECCBA /* BlobListCell.swift */,
+				B7E7B3BF2A2BB7380042F7D5 /* Notifications.swift */,
 			);
 			path = plop;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E7B3C02A2BB7380042F7D5 /* Notifications.swift in Sources */,
 				B703FE0024D2A89500ADC7A0 /* BlobPopover.swift in Sources */,
 				B7BDCC60286D69B700B668CC /* BlobPreview.swift in Sources */,
 				B7B5D62D285EF39400E8BC8A /* OpenButton.swift in Sources */,
