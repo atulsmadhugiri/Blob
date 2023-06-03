@@ -31,6 +31,7 @@
 		B7BDCC60286D69B700B668CC /* BlobPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BDCC5F286D69B700B668CC /* BlobPreview.swift */; };
 		B7E7B3C02A2BB7380042F7D5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7B3BF2A2BB7380042F7D5 /* Notifications.swift */; };
 		B7E7B3C22A2BE3B80042F7D5 /* StatisticsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7B3C12A2BE3B80042F7D5 /* StatisticsButton.swift */; };
+		B7E7B3C42A2BE53C0042F7D5 /* ConfigurationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E7B3C32A2BE53C0042F7D5 /* ConfigurationButton.swift */; };
 		B7F0B23C28F3897800BECCBA /* BlobListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F0B23B28F3897800BECCBA /* BlobListCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		B7BDCC5F286D69B700B668CC /* BlobPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPreview.swift; sourceTree = "<group>"; };
 		B7E7B3BF2A2BB7380042F7D5 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		B7E7B3C12A2BE3B80042F7D5 /* StatisticsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsButton.swift; sourceTree = "<group>"; };
+		B7E7B3C32A2BE53C0042F7D5 /* ConfigurationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationButton.swift; sourceTree = "<group>"; };
 		B7F0B23B28F3897800BECCBA /* BlobListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,6 +151,7 @@
 				B7F0B23B28F3897800BECCBA /* BlobListCell.swift */,
 				B7E7B3BF2A2BB7380042F7D5 /* Notifications.swift */,
 				B7E7B3C12A2BE3B80042F7D5 /* StatisticsButton.swift */,
+				B7E7B3C32A2BE53C0042F7D5 /* ConfigurationButton.swift */,
 			);
 			path = plop;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				B7E7B3C22A2BE3B80042F7D5 /* StatisticsButton.swift in Sources */,
 				B707557028444646005D4C51 /* ScreenshotButton.swift in Sources */,
 				B70755742844499E005D4C51 /* Utils.swift in Sources */,
+				B7E7B3C42A2BE53C0042F7D5 /* ConfigurationButton.swift in Sources */,
 				B7B5AB3D285F8C7500C98B70 /* UploadProgressView.swift in Sources */,
 				B71ABFA9290EFD310033E3E6 /* RecordButton.swift in Sources */,
 				B7F0B23C28F3897800BECCBA /* BlobListCell.swift in Sources */,

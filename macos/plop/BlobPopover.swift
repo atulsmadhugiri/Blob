@@ -41,7 +41,10 @@ struct BlobPopover: View {
 
       Divider()
 
-      StatisticsButton()
+      HStack {
+        StatisticsButton()
+        ConfigurationButton()
+      }
 
     }.padding(.all, 10).padding(.top, 10)
   }
