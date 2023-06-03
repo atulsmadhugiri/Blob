@@ -44,6 +44,7 @@ struct BlobPopover: View {
       HStack {
         StatisticsButton()
         ConfigurationButton()
+        DebugButton()
       }
 
     }.padding(.all, 10).padding(.top, 10)
