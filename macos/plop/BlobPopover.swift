@@ -39,6 +39,10 @@ struct BlobPopover: View {
         }
       }.listStyle(.sidebar)
 
+      Divider()
+
+      StatisticsButton()
+
     }.padding(.all, 10).padding(.top, 10)
   }
 }
