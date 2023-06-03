@@ -13,7 +13,7 @@ func successfulBlobNotification(blobEntry: BlobEntry) {
       notifContent.body = blobEntry.fileSize ?? "FILE SIZE"
 
       do {
-        let filename = blobEntry.uploadLocalPath!.lastpathComponent
+        let filename = blobEntry.uploadLocalPath!.lastPathComponent
         let temporaryPath: String = "\(NSTemporaryDirectory())notifAttach/\(filename)"
         let temporaryPathURL: URL = URL(fileURLWithPath: temporaryPath)
 
