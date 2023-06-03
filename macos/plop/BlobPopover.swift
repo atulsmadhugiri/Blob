@@ -15,21 +15,21 @@ struct BlobPopover: View {
           uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
       }
 
-      UploadProgressView(
-        uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
-
-      HStack {
-        TextField("", text: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant("")).frame(
-          width: 208)
-        CopyButton(previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""))
-        OpenButton(previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""))
-      }
-
       Divider()
 
       BlobPreview(
         previousUploadLocalPath: $blobGlobalState.blobEntries.last?.uploadLocalPath
           ?? .constant(URL(string: "")))
+
+      UploadProgressView(
+        uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
+
+      HStack {
+        TextField("", text: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant("")).frame(
+          width: 208).textFieldStyle(.roundedBorder)
+        CopyButton(previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""))
+        OpenButton(previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""))
+      }
 
       Divider()
 
