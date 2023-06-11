@@ -78,12 +78,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       uploadTask.observe(.success) { _ in
         NSSound(named: "Funk")?.play()
         replaceClipboard(with: destinationURL)
-        let blobEntry = BlobEntry()
-        blobEntry.uploadURL = destinationURL
-        blobEntry.uploadLocalPath = localPath
-        blobEntry.fileSize = getFormattedFileSize(fromURL: localPath)
-        blobEntry.mimeType = getMIMEType(fromURL: localPath)
-        blobEntry.uploadedAt = Date()
+        let blobEntry = BlobEntry(
+          uploadProgress: 1.0,
+          uploadURL: destinationURL,
+          uploadLocalPath: localPath,
+          fileSize: getFormattedFileSize(fromURL: localPath),
+          mimeType: getMIMEType(fromURL: localPath),
+          uploadedAt: Date()
+        )
         successfulBlobNotification(blobEntry: blobEntry)
         self.blobGlobalState.blobEntries.append(blobEntry)
       }
@@ -107,12 +109,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           uploadTask.observe(.success) { _ in
             NSSound(named: "Funk")?.play()
             replaceClipboard(with: destinationURL)
-            let blobEntry = BlobEntry()
-            blobEntry.uploadURL = destinationURL
-            blobEntry.uploadLocalPath = localPath
-            blobEntry.fileSize = getFormattedFileSize(fromURL: localPath)
-            blobEntry.mimeType = getMIMEType(fromURL: localPath)
-            blobEntry.uploadedAt = Date()
+            let blobEntry = BlobEntry(
+              uploadProgress: 1.0,
+              uploadURL: destinationURL,
+              uploadLocalPath: localPath,
+              fileSize: getFormattedFileSize(fromURL: localPath),
+              mimeType: getMIMEType(fromURL: localPath),
+              uploadedAt: Date()
+            )
             successfulBlobNotification(blobEntry: blobEntry)
             self.blobGlobalState.blobEntries.append(blobEntry)
           }
