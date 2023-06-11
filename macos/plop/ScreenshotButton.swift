@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ScreenshotButton: View {
-  @ObservedObject var blobGlobalState: BlobGlobalState
+  @Bindable var blobGlobalState: BlobGlobalState
   @Binding var uploadProgress: Double
 
   var body: some View {

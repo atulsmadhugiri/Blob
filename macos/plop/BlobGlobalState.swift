@@ -1,5 +1,6 @@
 import FirebaseStorage
 import Foundation
+import Observation
 
 class BlobEntry: ObservableObject, Identifiable {
   @Published var id = UUID()
@@ -12,6 +13,6 @@ class BlobEntry: ObservableObject, Identifiable {
   @Published var uploadedAt: Date?
 }
 
-class BlobGlobalState: ObservableObject {
-  @Published var blobEntries: [BlobEntry] = []
+@Observable class BlobGlobalState {
+  var blobEntries: [BlobEntry] = []
 }

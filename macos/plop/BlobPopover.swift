@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct BlobPopover: View {
-  @ObservedObject var blobGlobalState: BlobGlobalState
+  @Bindable var blobGlobalState: BlobGlobalState
 
   var body: some View {
     VStack {
@@ -26,7 +26,8 @@ struct BlobPopover: View {
 
       HStack {
         TextField("", text: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant("")).frame(
-          width: 208).textFieldStyle(.roundedBorder)
+          width: 208
+        ).textFieldStyle(.roundedBorder)
         CopyButton(previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""))
         OpenButton(previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""))
       }
