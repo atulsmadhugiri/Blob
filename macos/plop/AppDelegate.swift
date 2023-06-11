@@ -82,8 +82,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
           uploadProgress: 1.0,
           uploadURL: destinationURL,
           uploadLocalPath: localPath,
-          fileSize: getFormattedFileSize(fromURL: localPath),
-          mimeType: getMIMEType(fromURL: localPath),
           uploadedAt: Date()
         )
         successfulBlobNotification(blobEntry: blobEntry)
@@ -113,8 +111,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
               uploadProgress: 1.0,
               uploadURL: destinationURL,
               uploadLocalPath: localPath,
-              fileSize: getFormattedFileSize(fromURL: localPath),
-              mimeType: getMIMEType(fromURL: localPath),
               uploadedAt: Date()
             )
             successfulBlobNotification(blobEntry: blobEntry)

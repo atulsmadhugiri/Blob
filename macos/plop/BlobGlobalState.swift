@@ -16,16 +16,23 @@ import Observation
     uploadProgress: Double = 1.0,
     uploadURL: String,
     uploadLocalPath: URL? = nil,
-    fileSize: String? = nil,
-    mimeType: String? = nil,
     uploadedAt: Date
   ) {
     self.id = id
     self.uploadProgress = uploadProgress
     self.uploadURL = uploadURL
     self.uploadLocalPath = uploadLocalPath
-    self.fileSize = fileSize
-    self.mimeType = mimeType
+
+    self.fileSize =
+      (uploadLocalPath != nil)
+      ? getFormattedFileSize(fromURL: uploadLocalPath!)
+      : "0kb"
+
+    self.mimeType =
+      (uploadLocalPath != nil)
+      ? getMIMEType(fromURL: uploadLocalPath!)
+      : "text/plain"
+
     self.uploadedAt = uploadedAt
   }
 }
