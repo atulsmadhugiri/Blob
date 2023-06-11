@@ -15,12 +15,7 @@ struct ScreenshotButton: View {
       uploadTask.observe(.success) { _ in
         NSSound(named: "Funk")?.play()
         replaceClipboard(with: destinationURL)
-        let blobEntry = BlobEntry(
-          uploadProgress: 1.0,
-          uploadURL: destinationURL,
-          uploadLocalPath: localPath,
-          uploadedAt: Date()
-        )
+        let blobEntry = BlobEntry(uploadURL: destinationURL, uploadLocalPath: localPath)
         successfulBlobNotification(blobEntry: blobEntry)
         blobGlobalState.blobEntries.append(blobEntry)
       }

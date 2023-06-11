@@ -9,17 +9,15 @@ import Observation
   var uploadLocalPath: URL? = URL(fileURLWithPath: NSTemporaryDirectory())
   var fileSize: String? = "0kb"
   var mimeType: String? = "text/plain"
-  var uploadedAt: Date = Date.now
+  var uploadedAt: Date = Date()
 
   init(
     id: UUID = UUID(),
-    uploadProgress: Double = 1.0,
     uploadURL: String,
-    uploadLocalPath: URL? = nil,
-    uploadedAt: Date
+    uploadLocalPath: URL? = nil
   ) {
     self.id = id
-    self.uploadProgress = uploadProgress
+    self.uploadProgress = 1.0
     self.uploadURL = uploadURL
     self.uploadLocalPath = uploadLocalPath
 
@@ -33,7 +31,7 @@ import Observation
       ? getMIMEType(fromURL: uploadLocalPath!)
       : "text/plain"
 
-    self.uploadedAt = uploadedAt
+    self.uploadedAt = Date()
   }
 }
 
