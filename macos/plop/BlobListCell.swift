@@ -13,7 +13,7 @@ struct BlobListCell: View {
           Text("[\(blobEntry.mimeType ?? "mime")]").font(.caption2.monospaced()).foregroundColor(
             .gray)
         }
-        Text(getFormattedDateTime(fromDate: blobEntry.uploadedAt ?? Date(timeIntervalSince1970: 0)))
+        Text(getFormattedDateTime(fromDate: blobEntry.uploadedAt))
           .font(.caption.monospaced())
       }
       Spacer()
