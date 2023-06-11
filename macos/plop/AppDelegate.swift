@@ -1,6 +1,7 @@
 import FirebaseCore
 import HotKey
 import SQLite
+import SwiftData
 import SwiftUI
 import UserNotifications
 
@@ -32,15 +33,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       )
     }
 
-    // We use NSPopover in place of NSWindow so icon appears in menubar.
-    // Credit: Anagh Sharma (https://github.com/AnaghSharma)
-    let contentView = BlobPopover(blobGlobalState: blobGlobalState)
-    popover.contentSize = NSSize(width: 360, height: 560)
-    popover.contentViewController = NSHostingController(rootView: contentView)
-    popover.animates = false
-    popover.behavior = NSPopover.Behavior.transient
+    do {
+      let swiftDataContainer = try ModelContainer(for: BlobEntry.self)
 
-    statusBar = StatusBar(popover)
+      // We use NSPopover in place of NSWindow so icon appears in menubar.
+      // Credit: Anagh Sharma (https://github.com/AnaghSharma)
+      let contentView = BlobPopover(blobGlobalState: blobGlobalState).modelContainer(
+        swiftDataContainer)
+      popover.contentSize = NSSize(width: 360, height: 560)
+      popover.contentViewController = NSHostingController(rootView: contentView)
+      popover.animates = false
+      popover.behavior = NSPopover.Behavior.transient
+
+      statusBar = StatusBar(popover)
+    } catch {
+      print("Failed to instantiate ModelContainer for BlobEntry")
+    }
   }
 
   func initializeSQLiteDB() {
