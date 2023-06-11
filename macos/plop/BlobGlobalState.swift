@@ -2,15 +2,14 @@ import FirebaseStorage
 import Foundation
 import Observation
 
-class BlobEntry: ObservableObject, Identifiable {
-  @Published var id = UUID()
-  @Published var uploadProgress: Double = 1.0
-  @Published var uploadURL: String = ""
-  @Published var uploadLocalPath: URL?
-  @Published var uploadTask: StorageUploadTask?
-  @Published var fileSize: String?
-  @Published var mimeType: String?
-  @Published var uploadedAt: Date?
+@Observable class BlobEntry: Identifiable {
+  var id = UUID()
+  var uploadProgress: Double = 1.0
+  var uploadURL: String = ""
+  var uploadLocalPath: URL? = URL(fileURLWithPath: NSTemporaryDirectory())
+  var fileSize: String? = "0kb"
+  var mimeType: String? = "text/plain"
+  var uploadedAt: Date = Date.now
 }
 
 @Observable class BlobGlobalState {
