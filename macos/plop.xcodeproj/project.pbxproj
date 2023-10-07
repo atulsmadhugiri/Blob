@@ -23,7 +23,6 @@
 		B721CFB7285F833B00B945C9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = B721CFB6285F833B00B945C9 /* FirebaseStorage */; };
 		B721CFBA285F839900B945C9 /* HotKey in Frameworks */ = {isa = PBXBuildFile; productRef = B721CFB9285F839900B945C9 /* HotKey */; };
 		B76CD614276E5716005F1A93 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B76CD613276E5716005F1A93 /* GoogleService-Info.plist */; };
-		B78BE10E28BC1BEA00DE6CAC /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = B78BE10D28BC1BEA00DE6CAC /* SQLite */; };
 		B7B5AB3D285F8C7500C98B70 /* UploadProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5AB3C285F8C7500C98B70 /* UploadProgressView.swift */; };
 		B7B5D62B285EF2F500E8BC8A /* CopyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */; };
 		B7B5D62D285EF39400E8BC8A /* OpenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B5D62C285EF39400E8BC8A /* OpenButton.swift */; };
@@ -94,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B78BE10E28BC1BEA00DE6CAC /* SQLite in Frameworks */,
 				B721CFBA285F839900B945C9 /* HotKey in Frameworks */,
 				B721CFB7285F833B00B945C9 /* FirebaseStorage in Frameworks */,
 			);
@@ -195,7 +193,6 @@
 			packageProductDependencies = (
 				B721CFB6285F833B00B945C9 /* FirebaseStorage */,
 				B721CFB9285F839900B945C9 /* HotKey */,
-				B78BE10D28BC1BEA00DE6CAC /* SQLite */,
 			);
 			productName = plop;
 			productReference = B703FDFA24D2A89500ADC7A0 /* plop.app */;
@@ -250,7 +247,6 @@
 			packageReferences = (
 				B721CFB5285F833B00B945C9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B721CFB8285F839900B945C9 /* XCRemoteSwiftPackageReference "HotKey" */,
-				B78BE10C28BC1BEA00DE6CAC /* XCRemoteSwiftPackageReference "SQLite" */,
 			);
 			productRefGroup = B703FDFB24D2A89500ADC7A0 /* Products */;
 			projectDirPath = "";
@@ -614,14 +610,6 @@
 				minimumVersion = 0.1.3;
 			};
 		};
-		B78BE10C28BC1BEA00DE6CAC /* XCRemoteSwiftPackageReference "SQLite" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.14.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -634,11 +622,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B721CFB8285F839900B945C9 /* XCRemoteSwiftPackageReference "HotKey" */;
 			productName = HotKey;
-		};
-		B78BE10D28BC1BEA00DE6CAC /* SQLite */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B78BE10C28BC1BEA00DE6CAC /* XCRemoteSwiftPackageReference "SQLite" */;
-			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

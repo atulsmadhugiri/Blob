@@ -1,6 +1,5 @@
 import FirebaseCore
 import HotKey
-import SQLite
 import SwiftData
 import SwiftUI
 import UserNotifications
@@ -17,7 +16,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var blobEntryContainer: ModelContainer?
 
   func applicationDidFinishLaunching(_: Notification) {
-    initializeSQLiteDB()
     FirebaseApp.configure()
     configureScreenshotHotKey()
     configureUploadHotKey()
@@ -49,27 +47,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       statusBar = StatusBar(popover)
     } catch {
       print("Failed to instantiate ModelContainer for BlobEntry")
-    }
-  }
-
-  func initializeSQLiteDB() {
-    let fileManager = FileManager.default
-    if let appSupportDirectoryURL = fileManager.urls(
-      for: .applicationSupportDirectory, in: .userDomainMask
-    ).first {
-      let blobSupportDirectoryURL = appSupportDirectoryURL.appendingPathComponent(
-        Bundle.main.bundleIdentifier!)
-      do {
-        try fileManager.createDirectory(
-          at: blobSupportDirectoryURL, withIntermediateDirectories: true)
-        let _ = try Connection(
-          blobSupportDirectoryURL.appendingPathComponent("clientDB.sqlite3").absoluteString)
-        print(
-          "Client DB created at: \(blobSupportDirectoryURL.appendingPathComponent("clientDB.sqlite3").absoluteString)"
-        )
-      } catch {
-        print(error)
-      }
     }
   }
 
