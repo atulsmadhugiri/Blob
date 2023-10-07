@@ -18,8 +18,8 @@ struct BlobPopover: View {
       Divider()
 
       BlobPreview(
-        previousUploadLocalPath: $blobGlobalState.blobEntries.last?.uploadLocalPath
-          ?? .constant(URL(string: "")))
+        previousUploadLocalPath: blobGlobalState.blobEntries.last?.uploadLocalPath
+          ?? URL(string: ""))
 
       UploadProgressView(
         uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
@@ -35,7 +35,7 @@ struct BlobPopover: View {
       Divider()
 
       List {
-        ForEach($blobGlobalState.blobEntries.reversed(), id: \.id) { blobEntry in
+        ForEach(blobGlobalState.blobEntries.reversed(), id: \.id) { blobEntry in
           BlobListCell(blobEntry: blobEntry)
         }
       }.listStyle(.sidebar)
