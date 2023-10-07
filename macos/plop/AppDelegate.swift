@@ -39,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       blobEntryContainer = try ModelContainer(for: BlobEntry.self)
       let contentView = BlobPopover(blobGlobalState: blobGlobalState).modelContainer(
         blobEntryContainer!)
-      popover.contentSize = NSSize(width: 360, height: 560)
+      popover.contentSize = NSSize(width: 400, height: 800)
       popover.contentViewController = NSHostingController(rootView: contentView)
       popover.animates = false
       popover.behavior = NSPopover.Behavior.transient

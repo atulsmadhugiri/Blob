@@ -2,8 +2,8 @@ import SwiftUI
 
 struct BlobPreview: View {
   var previousUploadLocalPath: URL?
-  var width: CGFloat = 300
-  var height: CGFloat = 200
+  var width: CGFloat = 360
+  var height: CGFloat = 240
 
   var body: some View {
     AsyncImage(url: previousUploadLocalPath) { image in
