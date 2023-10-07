@@ -1,7 +1,9 @@
+import SwiftData
 import SwiftUI
 
 struct BlobPopover: View {
   @Bindable var blobGlobalState: BlobGlobalState
+  @Query var entries: [BlobEntry]
 
   var body: some View {
     VStack {
@@ -35,7 +37,7 @@ struct BlobPopover: View {
       Divider()
 
       List {
-        ForEach(blobGlobalState.blobEntries.reversed(), id: \.id) { blobEntry in
+        ForEach(entries.reversed(), id: \.id) { blobEntry in
           BlobListCell(blobEntry: blobEntry)
         }
       }.listStyle(.sidebar)

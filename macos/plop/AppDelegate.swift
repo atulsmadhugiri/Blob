@@ -14,6 +14,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
   var screenshotHotKey = HotKey(key: .z, modifiers: [.command, .shift])
   var uploadHotKey = HotKey(key: .u, modifiers: [.command, .shift])
 
+  var blobEntryContainer: ModelContainer?
+
   func applicationDidFinishLaunching(_: Notification) {
     initializeSQLiteDB()
     FirebaseApp.configure()
@@ -34,12 +36,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     do {
-      let swiftDataContainer = try ModelContainer(for: BlobEntry.self)
-
       // We use NSPopover in place of NSWindow so icon appears in menubar.
       // Credit: Anagh Sharma (https://github.com/AnaghSharma)
+      blobEntryContainer = try ModelContainer(for: BlobEntry.self)
       let contentView = BlobPopover(blobGlobalState: blobGlobalState).modelContainer(
-        swiftDataContainer)
+        blobEntryContainer!)
       popover.contentSize = NSSize(width: 360, height: 560)
       popover.contentViewController = NSHostingController(rootView: contentView)
       popover.animates = false
@@ -72,6 +73,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
   }
 
+  @MainActor
   func configureScreenshotHotKey() {
     screenshotHotKey.keyDownHandler = {
       NSApp.activate(ignoringOtherApps: true)
@@ -88,7 +90,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         replaceClipboard(with: destinationURL)
         let blobEntry = BlobEntry(uploadURL: destinationURL, uploadLocalPath: localPath)
         successfulBlobNotification(blobEntry: blobEntry)
-        self.blobGlobalState.blobEntries.append(blobEntry)
+        self.blobEntryContainer?.mainContext.insert(blobEntry)
       }
     }
   }

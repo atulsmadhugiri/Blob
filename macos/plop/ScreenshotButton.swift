@@ -1,8 +1,10 @@
+import SwiftData
 import SwiftUI
 
 struct ScreenshotButton: View {
   @Bindable var blobGlobalState: BlobGlobalState
   @Binding var uploadProgress: Double
+  @Environment(\.modelContext) private var modelContext
 
   var body: some View {
     Button(action: {
@@ -17,7 +19,7 @@ struct ScreenshotButton: View {
         replaceClipboard(with: destinationURL)
         let blobEntry = BlobEntry(uploadURL: destinationURL, uploadLocalPath: localPath)
         successfulBlobNotification(blobEntry: blobEntry)
-        blobGlobalState.blobEntries.append(blobEntry)
+        modelContext.insert(blobEntry)
       }
     }) {
       Image(systemName: "viewfinder")
