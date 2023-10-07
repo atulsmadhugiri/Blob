@@ -15,11 +15,9 @@ struct BlobPopover: View {
 
       Divider()
 
-      BlobPreview(
-        previousUploadLocalPath: entries.last?.uploadLocalPath ?? URL(string: ""))
+      BlobPreview(previousUploadLocalPath: entries.last?.uploadLocalPath)
 
-      UploadProgressView(
-        uploadProgress: $blobGlobalState.uploadProgress)
+      UploadProgressView(uploadProgress: blobGlobalState.uploadProgress)
 
       HStack {
         TextField("", text: .constant(entries.last?.uploadURL ?? "")).frame(
