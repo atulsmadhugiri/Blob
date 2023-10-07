@@ -95,6 +95,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
   }
 
+  @MainActor
   func configureUploadHotKey() {
     uploadHotKey.keyDownHandler = {
       NSApp.activate(ignoringOtherApps: true)
@@ -114,7 +115,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             replaceClipboard(with: destinationURL)
             let blobEntry = BlobEntry(uploadURL: destinationURL, uploadLocalPath: localPath)
             successfulBlobNotification(blobEntry: blobEntry)
-            self.blobGlobalState.blobEntries.append(blobEntry)
+            self.blobEntryContainer?.mainContext.insert(blobEntry)
           }
         }
       }
