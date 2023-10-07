@@ -15,8 +15,18 @@ func generateFileName(nameLength: Int = 6, fileExtension: String = ".png") -> St
 }
 
 func captureScreenshot() -> String {
-  let temporaryDirectory: String = NSTemporaryDirectory()
-  let destinationPath = "\(temporaryDirectory)\(generateFileName())"
+  let temporaryDirectory = URL.homeDirectory.appending(path: ".blob", directoryHint: .isDirectory)
+
+  do {
+    try FileManager().createDirectory(
+      at: temporaryDirectory,
+      withIntermediateDirectories: true
+    )
+  } catch {
+    print("Unable to create $HOME/.blob/ directory.")
+  }
+
+  let destinationPath = "\(temporaryDirectory.path())\(generateFileName())"
 
   let screenCaptureTask = Process()
   screenCaptureTask.launchPath = "/usr/sbin/screencapture"
@@ -37,7 +47,8 @@ func uploadBlob(filepath: String) -> (
   let destinationRef = storageBucket.child("\(filename)")
   let destinationURL = "https://\(GCLOUD_STORAGE_BUCKET)\(filename)"
 
-  let uploadTask: StorageUploadTask = destinationRef.putFile(from: URL(fileURLWithPath: filepath)) { _, error in
+  let uploadTask: StorageUploadTask = destinationRef.putFile(from: URL(fileURLWithPath: filepath)) {
+    _, error in
     if let error {
       print("Error uploading file to Google Cloud Storage: \(error)")
     }
