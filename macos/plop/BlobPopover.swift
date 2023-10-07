@@ -9,7 +9,6 @@ struct BlobPopover: View {
     VStack {
       HStack {
         ScreenshotButton(
-          blobGlobalState: blobGlobalState,
           uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
         RecordButton()
         UploadButton(

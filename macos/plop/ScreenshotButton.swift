@@ -2,7 +2,6 @@ import SwiftData
 import SwiftUI
 
 struct ScreenshotButton: View {
-  @Bindable var blobGlobalState: BlobGlobalState
   @Binding var uploadProgress: Double
   @Environment(\.modelContext) private var modelContext
 
@@ -31,7 +30,6 @@ struct ScreenshotButton: View {
 struct ScreenshotButton_Previews: PreviewProvider {
   static var previews: some View {
     ScreenshotButton(
-      blobGlobalState: BlobGlobalState(),
       uploadProgress: .constant(1.0))
   }
 }
