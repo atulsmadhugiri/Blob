@@ -81,7 +81,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       let (destinationURL, uploadTask, localPath) = uploadBlob(filepath: filepath)
 
       uploadTask.observe(.progress) { snapshot in
-        self.blobGlobalState.blobEntries.last?.uploadProgress =
+        self.blobGlobalState.uploadProgress =
           snapshot.progress?.fractionCompleted ?? 0
       }
 
@@ -106,7 +106,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             filepath: filepath.path)
 
           uploadTask.observe(.progress) { snapshot in
-            self.blobGlobalState.blobEntries.last?.uploadProgress =
+            self.blobGlobalState.uploadProgress =
               snapshot.progress?.fractionCompleted ?? 0
           }
 

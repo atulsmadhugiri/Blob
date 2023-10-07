@@ -1,7 +1,6 @@
 import SwiftUI
 
 struct UploadButton: View {
-  @Binding var previousUploadURL: String
   @Binding var uploadProgress: Double
 
   @State private var fileSelectionDialogPresented = false
@@ -26,7 +25,6 @@ struct UploadButton: View {
         uploadTask.observe(.success) { _ in
           NSSound(named: "Funk")?.play()
           replaceClipboard(with: destinationURL)
-          previousUploadURL = destinationURL
         }
       } catch {
         print("Could not get filepath for selected file.")
@@ -37,6 +35,6 @@ struct UploadButton: View {
 
 struct UploadButton_Previews: PreviewProvider {
   static var previews: some View {
-    UploadButton(previousUploadURL: .constant("https://google.com"), uploadProgress: .constant(1.0))
+    UploadButton(uploadProgress: .constant(1.0))
   }
 }

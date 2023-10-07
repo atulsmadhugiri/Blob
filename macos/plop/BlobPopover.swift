@@ -8,12 +8,9 @@ struct BlobPopover: View {
   var body: some View {
     VStack {
       HStack {
-        ScreenshotButton(
-          uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
+        ScreenshotButton(uploadProgress: $blobGlobalState.uploadProgress)
         RecordButton()
-        UploadButton(
-          previousUploadURL: $blobGlobalState.blobEntries.last?.uploadURL ?? .constant(""),
-          uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
+        UploadButton(uploadProgress: $blobGlobalState.uploadProgress)
       }
 
       Divider()
@@ -22,7 +19,7 @@ struct BlobPopover: View {
         previousUploadLocalPath: entries.last?.uploadLocalPath ?? URL(string: ""))
 
       UploadProgressView(
-        uploadProgress: $blobGlobalState.blobEntries.last?.uploadProgress ?? .constant(0.0))
+        uploadProgress: $blobGlobalState.uploadProgress)
 
       HStack {
         TextField("", text: .constant(entries.last?.uploadURL ?? "")).frame(

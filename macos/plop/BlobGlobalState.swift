@@ -5,7 +5,6 @@ import SwiftData
 
 @Model final class BlobEntry: Identifiable {
   var id = UUID()
-  var uploadProgress: Double = 1.0
   var uploadURL: String = ""
   var uploadLocalPath: URL? = nil
   var fileSize: String? = nil
@@ -18,7 +17,6 @@ import SwiftData
     uploadLocalPath: URL? = nil
   ) {
     self.id = id
-    self.uploadProgress = 1.0
     self.uploadURL = uploadURL
     self.uploadLocalPath = uploadLocalPath
 
@@ -37,5 +35,5 @@ import SwiftData
 }
 
 @Observable final class BlobGlobalState {
-  var blobEntries: [BlobEntry] = []
+  var uploadProgress: Double = 1.0
 }
