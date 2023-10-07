@@ -18,8 +18,8 @@ struct BlobListCell: View {
       }
       Spacer()
       VStack {
-        CopyButton(previousUploadURL: .constant(blobEntry.uploadURL))
-        OpenButton(previousUploadURL: .constant(blobEntry.uploadURL))
+        CopyButton(previousUploadURL: blobEntry.uploadURL)
+        OpenButton(previousUploadURL: blobEntry.uploadURL)
       }
     }
   }

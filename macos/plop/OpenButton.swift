@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct OpenButton: View {
-  @Binding var previousUploadURL: String
+  var previousUploadURL: String
 
   var body: some View {
     Button(action: {
@@ -16,6 +16,6 @@ struct OpenButton: View {
 
 struct OpenButton_Previews: PreviewProvider {
   static var previews: some View {
-    OpenButton(previousUploadURL: .constant("https://google.com"))
+    OpenButton(previousUploadURL: "https://google.com")
   }
 }
