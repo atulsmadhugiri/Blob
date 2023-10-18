@@ -21,7 +21,7 @@ struct BlobPopover: View {
 
       HStack {
         TextField("", text: .constant(entries.last?.uploadURL ?? "")).frame(
-          width: 208
+          width: 260
         ).textFieldStyle(.roundedBorder)
         CopyButton(previousUploadURL: entries.last?.uploadURL ?? "")
         OpenButton(previousUploadURL: entries.last?.uploadURL ?? "")
