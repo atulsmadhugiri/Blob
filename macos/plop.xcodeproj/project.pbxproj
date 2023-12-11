@@ -76,6 +76,7 @@
 		B71ABF9F290EF74F0033E3E6 /* BlobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobTests.swift; sourceTree = "<group>"; };
 		B71ABFA8290EFD310033E3E6 /* RecordButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButton.swift; sourceTree = "<group>"; };
 		B76CD613276E5716005F1A93 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		B7ADAA442B27794100072CCD /* plopRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = plopRelease.entitlements; sourceTree = "<group>"; };
 		B7B5AB3C285F8C7500C98B70 /* UploadProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadProgressView.swift; sourceTree = "<group>"; };
 		B7B5D62A285EF2F500E8BC8A /* CopyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopyButton.swift; sourceTree = "<group>"; };
 		B7B5D62C285EF39400E8BC8A /* OpenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenButton.swift; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		B703FDFC24D2A89500ADC7A0 /* plop */ = {
 			isa = PBXGroup;
 			children = (
+				B7ADAA442B27794100072CCD /* plopRelease.entitlements */,
 				B703FE0124D2A89500ADC7A0 /* Assets.xcassets */,
 				B703FE0324D2A89500ADC7A0 /* Preview Content */,
 				B703FE0A24D2A89500ADC7A0 /* plop.entitlements */,
@@ -490,7 +492,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = plop/plop.entitlements;
+				CODE_SIGN_ENTITLEMENTS = plop/plopRelease.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
