@@ -60,7 +60,7 @@
 
 /* Begin PBXFileReference section */
 		2DDA0DC01E5C360C974AF4A3 /* BlobGlobalState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlobGlobalState.swift; sourceTree = "<group>"; };
-		B703FDFA24D2A89500ADC7A0 /* plop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = plop.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B703FDFA24D2A89500ADC7A0 /* Blob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B703FDFD24D2A89500ADC7A0 /* AppDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B703FDFF24D2A89500ADC7A0 /* BlobPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlobPopover.swift; sourceTree = "<group>"; };
 		B703FE0124D2A89500ADC7A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 		B703FDFB24D2A89500ADC7A0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B703FDFA24D2A89500ADC7A0 /* plop.app */,
+				B703FDFA24D2A89500ADC7A0 /* Blob.app */,
 				B71ABF9D290EF74F0033E3E6 /* BlobTests.xctest */,
 			);
 			name = Products;
@@ -194,9 +194,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B703FDF924D2A89500ADC7A0 /* plop */ = {
+		B703FDF924D2A89500ADC7A0 /* Blob */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B703FE0D24D2A89500ADC7A0 /* Build configuration list for PBXNativeTarget "plop" */;
+			buildConfigurationList = B703FE0D24D2A89500ADC7A0 /* Build configuration list for PBXNativeTarget "Blob" */;
 			buildPhases = (
 				B703FDF624D2A89500ADC7A0 /* Sources */,
 				B703FDF724D2A89500ADC7A0 /* Frameworks */,
@@ -207,13 +207,13 @@
 			);
 			dependencies = (
 			);
-			name = plop;
+			name = Blob;
 			packageProductDependencies = (
 				B721CFB6285F833B00B945C9 /* FirebaseStorage */,
 				B721CFB9285F839900B945C9 /* HotKey */,
 			);
 			productName = plop;
-			productReference = B703FDFA24D2A89500ADC7A0 /* plop.app */;
+			productReference = B703FDFA24D2A89500ADC7A0 /* Blob.app */;
 			productType = "com.apple.product-type.application";
 		};
 		B71ABF9C290EF74F0033E3E6 /* BlobTests */ = {
@@ -270,7 +270,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B703FDF924D2A89500ADC7A0 /* plop */,
+				B703FDF924D2A89500ADC7A0 /* Blob */,
 				B71ABF9C290EF74F0033E3E6 /* BlobTests */,
 			);
 		};
@@ -337,7 +337,7 @@
 /* Begin PBXTargetDependency section */
 		B71ABFA2290EF74F0033E3E6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B703FDF924D2A89500ADC7A0 /* plop */;
+			target = B703FDF924D2A89500ADC7A0 /* Blob */;
 			targetProxy = B71ABFA1290EF74F0033E3E6 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -593,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B703FE0D24D2A89500ADC7A0 /* Build configuration list for PBXNativeTarget "plop" */ = {
+		B703FE0D24D2A89500ADC7A0 /* Build configuration list for PBXNativeTarget "Blob" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B703FE0E24D2A89500ADC7A0 /* Debug */,
