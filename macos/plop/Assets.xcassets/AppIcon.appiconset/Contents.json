@@ -1,31 +1,31 @@
 {
   "images" : [
     {
-      "filename" : "atul-6.png",
+      "filename" : "atul_16.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "16x16"
     },
     {
-      "filename" : "atul-7.png",
+      "filename" : "atul_32.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "16x16"
     },
     {
-      "filename" : "atul-5.png",
+      "filename" : "atul_32 1.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "32x32"
     },
     {
-      "filename" : "atul-4.png",
+      "filename" : "atul_64.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "32x32"
     },
     {
-      "filename" : "atul-3.png",
+      "filename" : "atul_128.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "128x128"
@@ -43,19 +43,19 @@
       "size" : "256x256"
     },
     {
-      "filename" : "atul.png",
+      "filename" : "atul_512 1.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "256x256"
     },
     {
-      "filename" : "atul-8.png",
+      "filename" : "atul_512.png",
       "idiom" : "mac",
       "scale" : "1x",
       "size" : "512x512"
     },
     {
-      "filename" : "atul-9.png",
+      "filename" : "atul_1024.png",
       "idiom" : "mac",
       "scale" : "2x",
       "size" : "512x512"
