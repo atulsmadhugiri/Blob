@@ -253,7 +253,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B703FDF524D2A89500ADC7A0 /* Build configuration list for PBXProject "plop" */;
+			buildConfigurationList = B703FDF524D2A89500ADC7A0 /* Build configuration list for PBXProject "Blob" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -554,7 +554,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/plop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/plop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blob.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Blob";
 			};
 			name = Debug;
 		};
@@ -577,14 +577,14 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/plop.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/plop";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Blob.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Blob";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B703FDF524D2A89500ADC7A0 /* Build configuration list for PBXProject "plop" */ = {
+		B703FDF524D2A89500ADC7A0 /* Build configuration list for PBXProject "Blob" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B703FE0B24D2A89500ADC7A0 /* Debug */,
